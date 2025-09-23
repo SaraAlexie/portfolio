@@ -4,17 +4,16 @@
 }
 
 @theme inline {
-  /*COMING SOON*/
+    /* COLOR */
+    --color-main: #3e0212;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    /*FOR DARK THEME*/
-  }
+    :root {
+        /*FOR DARK THEME*/
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }

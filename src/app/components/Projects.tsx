@@ -29,8 +29,8 @@ export default function Projects() {
     }, []);
 
     return (
-        <section id="projects" className="bg-blue-400 pt-5">
-            <ul>
+        <section id="projects" className="pt-5 bg-main">
+            <ul className="max-w-4xl mx-auto">
                 <Swiper
                     modules={[Pagination, Autoplay]}
                     loop={true}

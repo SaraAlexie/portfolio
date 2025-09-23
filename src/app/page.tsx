@@ -1,13 +1,16 @@
 "use client";
-import Navbar from "../../public/components/Navbar";
-import Projects from "../../public/components/Projects";
+import { DimensionProvider } from "./contexts/DimentionContext";
+import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
 
 export default function Home() {
     return (
-        <div className="text-center bg-red-500">
-            <h1 className="mb-10 text-5xl font-bold">Sara's portfolio</h1>
-            <Navbar />
-            <Projects />
-        </div>
+        <DimensionProvider>
+            <div className="text-center">
+                <h1 className="mb-10 text-5xl font-bold">Sara's portfolio</h1>
+                <Navbar />
+                <Projects />
+            </div>
+        </DimensionProvider>
     );
 }
