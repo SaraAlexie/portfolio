@@ -1,0 +1,22 @@
+:root {
+    --swiper-theme-color: none;
+    --swiper-pagination-color: white;
+}
+
+.swiper-pagination-bullet-inactive-color {
+    color: rgb(104, 99, 99);
+}
+
+.swiper-pagination-bullet-inactive-opacity {
+    opacity: 1;
+}
+
+.swiper-slide img {
+    border-radius: 10px;
+}
+
+.swiper-pagination {
+    position: relative;
+    bottom: 0;
+    margin-top: 1rem;
+}

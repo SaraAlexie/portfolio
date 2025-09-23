@@ -1,5 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "../styles/customswiper.css";
 
 export type Project = {
     id: number;
@@ -23,19 +28,52 @@ export default function Projects() {
             .catch(console.error);
     }, []);
 
-    return projects ? (
-        <section className="py-12 bg-green-400">
+    return (
+        <section id="projects" className="bg-blue-400 pt-5">
             <ul>
-                {projects?.map((project) => (
-                    <li key={project.id}>
-                        <img src={project.image} alt="fhgjhgjgf" />
-                    </li>
-                ))}
+                <Swiper
+                    modules={[Pagination, Autoplay]}
+                    loop={true}
+                    spaceBetween={16}
+                    centeredSlides={true}
+                    initialSlide={0}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    }}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    breakpoints={{
+                        0: { slidesPerView: 1, spaceBetween: 12 }, // mobile
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 16,
+                            centeredSlides: false,
+                        }, // tablets
+                        1024: { slidesPerView: 3, spaceBetween: 24 }, // desktop
+                    }}
+                >
+                    {projects
+                        .slice()
+                        .reverse()
+                        .map((project) => (
+                            <SwiperSlide key={project.id}>
+                                <li>
+                                    <img
+                                        src={
+                                            project.image ||
+                                            "/projects/fallback-image.jpg"
+                                        }
+                                        alt={project.title}
+                                        className="w-full h-full object-cover object-top"
+                                        draggable={false}
+                                    />
+                                </li>
+                            </SwiperSlide>
+                        ))}
+                </Swiper>
             </ul>
         </section>
-    ) : (
-        <h2 className="text-center font-bold">
-            Projects cannot be shown at the moment
-        </h2>
     );
 }
