@@ -30,7 +30,7 @@ export default function Projects() {
 
     return (
         <section id="projects" className="pt-5 bg-main">
-            <ul className="max-w-4xl mx-auto">
+            <ul className="lg:max-w-4xl md:max-w-2xl max-w-sm mx-auto">
                 <Swiper
                     modules={[Pagination, Autoplay]}
                     loop={true}
@@ -45,8 +45,12 @@ export default function Projects() {
                         clickable: true,
                     }}
                     breakpoints={{
-                        0: { slidesPerView: 1, spaceBetween: 12 }, // mobile
+                        0: { slidesPerView: 1, spaceBetween: 12 }, // mobile-first
                         640: {
+                            slidesPerView: 1,
+                            spaceBetween: 12,
+                        }, // mobile
+                        768: {
                             slidesPerView: 2,
                             spaceBetween: 16,
                             centeredSlides: false,
