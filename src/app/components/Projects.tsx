@@ -37,10 +37,10 @@ export default function Projects() {
                     spaceBetween={16}
                     centeredSlides={true}
                     initialSlide={0}
-                    autoplay={{
+                    /*autoplay={{
                         delay: 3000,
                         disableOnInteraction: false,
-                    }}
+                    }}*/
                     pagination={{
                         clickable: true,
                     }}

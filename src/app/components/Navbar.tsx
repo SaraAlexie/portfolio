@@ -11,7 +11,7 @@ export default function Navbar() {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="max-w-5xl mx-auto flex justify-between items-center relative px-4 py-2">
+        <header className="max-w-5xl mx-auto flex justify-between items-center sticky top-0 px-4 py-2 bg-white">
             <p>Logo</p>
 
             {/* Desktop nav */}
@@ -37,7 +37,7 @@ export default function Navbar() {
 
             {/* Mobile dropdown */}
             {open && (
-                <nav className="absolute top-full right-4 mt-2 bg-white shadow-lg rounded-xl p-4 sm:hidden z-50">
+                <nav className="absolute top-full right-4 mt-2 bg-none shadow-lg rounded-xl p-4 sm:hidden z-50">
                     <ul className="flex flex-col gap-2">
                         {navLinks.map(({ href, label }) => (
                             <li key={href}>
