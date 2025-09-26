@@ -30,18 +30,29 @@ export default function Skills() {
         { title: "IntelliJ", icon: <DiIntellij /> },
         { title: "NPM", icon: <DiNpm /> },
         { title: "Gulp", icon: <DiGulp /> },
-        { title: "Sass ", icon: <DiSass /> },
+        { title: "Sass", icon: <DiSass /> },
         { title: "Visual Studio", icon: <DiVisualstudio /> },
     ];
 
     return (
-        <section
-            id="skills"
-            className="lg:max-w-4xl md:max-w-2xl max-w-sm mx-auto flex justify-between items-center"
-        >
-            {skills.map((skill, index) => (
-                <p key={index}>{skill.icon}</p>
-            ))}
+        <section id="skills" className="max-w-5xl mx-auto px-4 py-8 bg-cream">
+            <h2 className="text-2xl font-bold mb-6 text-center text-burgundy">
+                Skills
+            </h2>
+
+            <div className="flex flex-wrap justify-center gap-6 text-burgundy">
+                {skills.map((skill, index) => (
+                    <div
+                        key={index}
+                        className="flex flex-col items-center gap-2 w-24"
+                    >
+                        <div className="text-5xl">{skill.icon}</div>
+                        <p className="text-sm font-medium text-center text-written">
+                            {skill.title}
+                        </p>
+                    </div>
+                ))}
+            </div>
         </section>
     );
 }
