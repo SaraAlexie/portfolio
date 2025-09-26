@@ -11,13 +11,13 @@ export default function Navbar() {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="bg-burgundy h-16">
-            <div className="max-w-5xl mx-auto my-auto flex justify-between items-center sticky top-0 px-4 h-full text-header font-bold">
+        <header className="sticky top-0 z-50 bg-burgundy h-16">
+            <div className="max-w-5xl mx-auto flex justify-between items-center px-4 h-full text-header font-bold">
                 <p>Logo</p>
 
                 {/* Desktop nav */}
                 <nav className="hidden sm:block sm:mr-8">
-                    <ul className="flex justify-between w-48">
+                    <ul className="flex gap-x-14">
                         {navLinks.map(({ href, label }) => (
                             <li key={href}>
                                 <a href={href}>{label}</a>
@@ -38,7 +38,7 @@ export default function Navbar() {
 
                 {/* Mobile dropdown */}
                 {open && (
-                    <nav className="absolute top-full right-4 mt-2 bg-none shadow-lg rounded-xl p-4 sm:hidden z-50 bg-burgundy">
+                    <nav className="absolute top-full right-4 mt-2 bg-burgundy shadow-lg rounded-xl p-4 sm:hidden z-50">
                         <ul className="flex flex-col gap-2">
                             {navLinks.map(({ href, label }) => (
                                 <li key={href}>

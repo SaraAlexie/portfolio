@@ -13,8 +13,9 @@ import {
     DiIntellij,
     DiNpm,
     DiSass,
-    DiVisualstudio,
 } from "react-icons/di";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { BiLogoVisualStudio } from "react-icons/bi";
 
 export default function Skills() {
     const skills = [
@@ -23,6 +24,7 @@ export default function Skills() {
         { title: "JavaScript", icon: <DiJavascript /> },
         { title: "React", icon: <DiReact /> },
         { title: "Node", icon: <DiNodejs /> },
+        { title: "Tailwind", icon: <RiTailwindCssFill /> },
         { title: "Git", icon: <DiGit /> },
         { title: "Java", icon: <DiJava /> },
         { title: "Docker", icon: <DiDocker /> },
@@ -31,7 +33,7 @@ export default function Skills() {
         { title: "NPM", icon: <DiNpm /> },
         { title: "Gulp", icon: <DiGulp /> },
         { title: "Sass", icon: <DiSass /> },
-        { title: "Visual Studio", icon: <DiVisualstudio /> },
+        { title: "Visual Studio Code", icon: <BiLogoVisualStudio /> },
     ];
 
     return (
