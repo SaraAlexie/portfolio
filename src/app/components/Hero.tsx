@@ -19,6 +19,7 @@ export default function Hero() {
                     from the toilet yet get scared by sudden appearance of
                     cucumber.
                 </p>
+                <h3>hello world</h3>
             </div>
         </section>
     );

@@ -26,15 +26,6 @@
     "api": "https://byabbe.se/on-this-day/"
   },
   {
-    "id": 4,
-    "title": "Next Project | Cat List",
-    "description": "First step into the world of Next.js with a focus on using the serverside functions of the framework",
-    "tech": ["React", "Next.js", "API", "Tailwind"],
-    "image": "/projects/cat-list-thumbnail.png",
-    "code": "https://github.com/SaraAlexie/nextproject",
-    "api": "https://thecatapi.com/"
-  },
-  {
     "id": 5,
     "title": "Smart Lights",
     "description": "IoT project using Philips Hue API to control a smart at home lighting setup. School project from February 2022",
@@ -51,14 +42,6 @@
     "image": "/projects/night-club-thumbnail.png",
     "code": "https://github.com/SaraAlexie/night-club",
     "api": "https://github.com/rts-cmk/night-club-api"
-  },
-  {
-    "id": 7,
-    "title": "Snake Game",
-    "description": "Game Developement made using only AI as part a an AI themed project-day at Danske Spil",
-    "tech": ["HTML", "CSS", "JavaScript", "Phaser3", "Chat-GPT", "Github Copilot"],
-    "image": "/projects/snake-game-thumbnail.png",
-    "code": "https://github.com/SaraAlexie/snakegame"
   },
   {
     "id": 8,

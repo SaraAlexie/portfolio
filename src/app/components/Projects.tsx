@@ -29,7 +29,8 @@ export default function Projects() {
     }, []);
 
     return (
-        <section id="projects" className="pt-5 bg-main">
+        <section id="projects" className="pt-5 bg-gold">
+            <h2 className="text-burgundy font-bold">Selected projects</h2>
             <ul className="lg:max-w-4xl md:max-w-2xl max-w-sm mx-auto">
                 <Swiper
                     modules={[Pagination, Autoplay]}
@@ -78,6 +79,12 @@ export default function Projects() {
                         ))}
                 </Swiper>
             </ul>
+            <p className="text-burgundy">
+                For more see my{" "}
+                <a href="https://github.com/SaraAlexie" target="blank">
+                    Github
+                </a>
+            </p>
         </section>
     );
 }

@@ -3,9 +3,39 @@
 :root {
 }
 
-@theme inline {
-    /* COLOR */
-    --color-main: #3e0212;
+@theme {
+    --color-burgundy: #6b2737;
+    --color-burgundy-dark: #4a1c2a;
+
+    /* Supporting colors */
+    --color-taupe: #b8a089;
+    --color-gold: #d4a373;
+    --color-gold-light: #ffd9a0;
+    --color-cream: #f4ede4;
+
+    /* Text */
+    --color-header: var(--color-cream);
+    --color-written: #1c1c1c;
+}
+
+@layer components {
+    h1 {
+        font-size: var(--text-3xl);
+        font-weight: var(--font-weight-semibold);
+    }
+
+    h2 {
+        font-size: var(--text-xl);
+        font-weight: var(--font-weight-semibold);
+    }
+
+    h3 {
+        font-size: var(--text-xl);
+    }
+
+    p {
+        font-size: var(--text-base);
+    }
 }
 
 @media (prefers-color-scheme: dark) {
