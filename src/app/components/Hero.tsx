@@ -13,13 +13,12 @@ export default function Hero() {
                 <p className="text-lg">Software Developer</p>
                 <h1 className="text-burgundy-dark">Sara A. N. Nederskov</h1>
                 <p>
-                    Sit in box lick sellotape and scoot butt on the rug, take a
-                    deep sniff of sock then walk around with mouth half open.
-                    Poop on floor and watch human clean up time to go zooooom.
-                    Play riveting piece on synthesizer keyboard instead of
-                    drinking water from the cat bowl, make sure to steal water
-                    from the toilet yet get scared by sudden appearance of
-                    cucumber.
+                    Did you say creative, diligent and awesome programmer? No?
+                    Well, good thing I did because that's what I am. I love
+                    making beautiful and functional websites your customers are
+                    going to enjoy using. Take a look around my portfolio and if
+                    you are interested in connecting, don't stay a stranger and
+                    reach out.
                 </p>
                 <div className="flex mt-2">
                     <button className="border-none py-3 px-6 rounded-lg text-base cursor-pointer mr-2 bg-burgundy text-cream">
@@ -35,3 +34,6 @@ export default function Hero() {
         </section>
     );
 }
+/**
+ * I think the illustration from the secong one and the lettering from the fourth are awesome! Is there a way tocombine the two by coding them?
+ */

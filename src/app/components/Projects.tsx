@@ -1,8 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import SmartLink from "../customexports/SmartLink";
+import Modal from "../customexports/Modal";
 import "swiper/css";
 import "swiper/css/pagination";
 import "../styles/customswiper.css";
@@ -21,6 +22,9 @@ export type Project = {
 
 export default function Projects() {
     const [projects, setProjects] = useState<Project[]>([]);
+    const [selectedProject, setSelectedProject] = useState<Project | null>(
+        null
+    );
 
     useEffect(() => {
         fetch("/data/projects.json")
@@ -36,30 +40,23 @@ export default function Projects() {
             </h2>
             <ul className="lg:max-w-4xl md:max-w-2xl max-w-sm mx-auto my-4">
                 <Swiper
-                    modules={[Pagination, Autoplay]}
+                    modules={[Pagination]}
                     loop={true}
                     spaceBetween={16}
                     centeredSlides={true}
                     initialSlide={0}
-                    autoplay={{
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    }}
                     pagination={{
                         clickable: true,
                     }}
                     breakpoints={{
-                        0: { slidesPerView: 1, spaceBetween: 12 }, // mobile-first
-                        640: {
-                            slidesPerView: 1,
-                            spaceBetween: 12,
-                        }, // mobile
+                        0: { slidesPerView: 1, spaceBetween: 12 },
+                        640: { slidesPerView: 1, spaceBetween: 12 },
                         768: {
                             slidesPerView: 2,
                             spaceBetween: 16,
                             centeredSlides: false,
-                        }, // tablets
-                        1024: { slidesPerView: 3, spaceBetween: 24 }, // desktop
+                        },
+                        1024: { slidesPerView: 3, spaceBetween: 24 },
                     }}
                 >
                     {projects
@@ -67,14 +64,17 @@ export default function Projects() {
                         .reverse()
                         .map((project) => (
                             <SwiperSlide key={project.id}>
-                                <li>
+                                <li
+                                    className="cursor-pointer"
+                                    onClick={() => setSelectedProject(project)}
+                                >
                                     <img
                                         src={
                                             project.image ||
                                             "/projects/fallback-image.jpg"
                                         }
                                         alt={project.title}
-                                        className="w-full h-full object-cover object-top"
+                                        className="w-full h-full object-cover object-top rounded-lg"
                                         draggable={false}
                                     />
                                 </li>
@@ -91,6 +91,13 @@ export default function Projects() {
                     Github
                 </SmartLink>
             </p>
+
+            {/* Modal */}
+            <Modal
+                isOpen={!!selectedProject}
+                onClose={() => setSelectedProject(null)}
+                project={selectedProject}
+            />
         </section>
     );
 }

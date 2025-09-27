@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import SmartLink from "../customexports/SmartLink";
 
 const navLinks = [
     { href: "#projects", label: "Projects" },
@@ -13,11 +14,14 @@ export default function Navbar() {
     return (
         <header className="sticky top-0 z-50 bg-burgundy h-16">
             <div className="max-w-5xl mx-auto flex justify-between items-center px-4 h-full text-header font-bold">
-                <div className="w-10 h-10 rounded-full bg-cream flex items-center justify-center">
+                <SmartLink
+                    href="/"
+                    className="w-10 h-10 rounded-full bg-cream flex items-center justify-center"
+                >
                     <span className="text-burgundy font-extrabold text-lg">
                         {"</>"}
                     </span>
-                </div>
+                </SmartLink>
 
                 {/* Desktop nav */}
                 <nav className="hidden sm:block sm:mr-8">
@@ -49,7 +53,7 @@ export default function Navbar() {
                                     <a
                                         href={href}
                                         onClick={() => setOpen(false)}
-                                        className="block"
+                                        className="block cursor-pointer"
                                     >
                                         {label}
                                     </a>
