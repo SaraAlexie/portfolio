@@ -13,7 +13,11 @@ export default function Navbar() {
     return (
         <header className="sticky top-0 z-50 bg-burgundy h-16">
             <div className="max-w-5xl mx-auto flex justify-between items-center px-4 h-full text-header font-bold">
-                <p>Logo</p>
+                <div className="w-10 h-10 rounded-full bg-cream flex items-center justify-center">
+                    <span className="text-burgundy font-extrabold text-lg">
+                        {"</>"}
+                    </span>
+                </div>
 
                 {/* Desktop nav */}
                 <nav className="hidden sm:block sm:mr-8">
