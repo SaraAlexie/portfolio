@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
+import SmartLink from "../customexports/SmartLink";
 import "swiper/css";
 import "swiper/css/pagination";
 import "../styles/customswiper.css";
@@ -33,17 +34,17 @@ export default function Projects() {
             <h2 className="text-burgundy font-bold text-center">
                 Selected projects
             </h2>
-            <ul className="lg:max-w-4xl md:max-w-2xl max-w-sm mx-auto">
+            <ul className="lg:max-w-4xl md:max-w-2xl max-w-sm mx-auto my-4">
                 <Swiper
                     modules={[Pagination, Autoplay]}
                     loop={true}
                     spaceBetween={16}
                     centeredSlides={true}
                     initialSlide={0}
-                    /*autoplay={{
+                    autoplay={{
                         delay: 3000,
                         disableOnInteraction: false,
-                    }}*/
+                    }}
                     pagination={{
                         clickable: true,
                     }}
@@ -81,15 +82,14 @@ export default function Projects() {
                         ))}
                 </Swiper>
             </ul>
-            <p className="text-burgundy text-center">
+            <p className="text-burgundy text-center pb-2">
                 For more see my{" "}
-                <a
+                <SmartLink
                     href="https://github.com/SaraAlexie"
-                    target="blank"
                     className="font-bold"
                 >
                     Github
-                </a>
+                </SmartLink>
             </p>
         </section>
     );

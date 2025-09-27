@@ -1,4 +1,5 @@
 "use client";
+import SmartLink from "../customexports/SmartLink";
 
 export default function Hero() {
     return (
@@ -25,22 +26,12 @@ export default function Hero() {
                         Resume
                     </button>
                     <button className="border-none py-3 px-6 rounded-lg text-base cursor-pointer bg-gold text-burgundy-dark">
-                        Github
+                        <SmartLink href="https://github.com/SaraAlexie">
+                            Github
+                        </SmartLink>
                     </button>
                 </div>
             </div>
         </section>
     );
 }
-
-/**
- * 
- *     button {
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      margin: 0.5rem;
-    }
- */
