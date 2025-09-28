@@ -16,6 +16,7 @@ import {
 } from "react-icons/di";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoVisualStudio } from "react-icons/bi";
+import { SiTypescript } from "react-icons/si";
 
 export default function Skills() {
     const skills = [
@@ -25,6 +26,7 @@ export default function Skills() {
         { title: "React", icon: <DiReact /> },
         { title: "Node", icon: <DiNodejs /> },
         { title: "Tailwind", icon: <RiTailwindCssFill /> },
+        { title: "Typescript", icon: <SiTypescript /> },
         { title: "Git", icon: <DiGit /> },
         { title: "Java", icon: <DiJava /> },
         { title: "Docker", icon: <DiDocker /> },

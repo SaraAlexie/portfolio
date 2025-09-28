@@ -34,6 +34,3 @@ export default function Hero() {
         </section>
     );
 }
-/**
- * I think the illustration from the secong one and the lettering from the fourth are awesome! Is there a way tocombine the two by coding them?
- */

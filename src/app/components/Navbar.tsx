@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import SmartLink from "../customexports/SmartLink";
+import Logo from "../customexports/Logo";
 
 const navLinks = [
     { href: "#projects", label: "Projects" },
@@ -14,14 +15,7 @@ export default function Navbar() {
     return (
         <header className="sticky top-0 z-50 bg-burgundy h-16">
             <div className="max-w-5xl mx-auto flex justify-between items-center px-4 h-full text-header font-bold">
-                <SmartLink
-                    href="/"
-                    className="w-10 h-10 rounded-full bg-cream flex items-center justify-center"
-                >
-                    <span className="text-burgundy font-extrabold text-lg">
-                        {"</>"}
-                    </span>
-                </SmartLink>
+                <Logo size={44} className="ml-0" href="/" />
 
                 {/* Desktop nav */}
                 <nav className="hidden sm:block sm:mr-8">

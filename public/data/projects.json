@@ -2,7 +2,7 @@
     {
     "id": 1,
     "title": "Today in History",
-    "description": "Project creating a Progressive Web App using wikipedia's API to show historical events which occured on the same date as when the app is accessed throughout history",
+    "description": "Project creating a Progressive Web App using wikipedia's API to show historical events which occured on the same date throughout history as when the app is accessed.",
     "tech": ["React", "PWA", "API"],
     "image": "/projects/today-in-history-thumbnail-2.png",
     "demo": "https://todayinhistory-sann.netlify.app/",
