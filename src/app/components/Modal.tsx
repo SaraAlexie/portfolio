@@ -22,7 +22,6 @@ export default function Modal({ isOpen, onClose, project }: ModalProps) {
 
     if (!isOpen || !project) return null;
 
-    // Combine thumbnail + extra images
     const allImages = [project.thumbnail, ...(project.images || [])];
 
     return (

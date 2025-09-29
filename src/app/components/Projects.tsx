@@ -1,12 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
 import SmartLink from "../customexports/SmartLink";
 import Modal from "./Modal";
-import { projectSwiperConfig } from "./SwiperConfig";
 import ProjectImage from "./ProjectImage";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "../styles/customswiper.css";
 
 export type Project = {
@@ -15,7 +16,7 @@ export type Project = {
     description: string;
     tech: string[];
     thumbnail: string;
-    images?: string[];
+    images: string[];
     live?: string;
     demo?: string;
     code?: string;
@@ -36,13 +37,34 @@ export default function Projects() {
     }, []);
 
     return (
-        <section id="projects" className="pt-5 bg-gold">
+        <section id="projects" className="pt-5 bg-gold relative">
             <h2 className="text-burgundy font-bold text-center">
                 Selected projects
             </h2>
 
-            <ul className="lg:max-w-4xl md:max-w-2xl max-w-sm mx-auto my-4">
-                <Swiper {...projectSwiperConfig}>
+            <div className="lg:max-w-4xl md:max-w-2xl max-w-sm mx-auto my-4 relative">
+                <Swiper
+                    modules={[Pagination, Navigation]}
+                    loop={true}
+                    spaceBetween={16}
+                    centeredSlides={true}
+                    initialSlide={0}
+                    pagination={{ clickable: true }}
+                    navigation={{
+                        nextEl: ".custom-next",
+                        prevEl: ".custom-prev",
+                    }}
+                    breakpoints={{
+                        0: { slidesPerView: 1, spaceBetween: 12 },
+                        640: { slidesPerView: 1, spaceBetween: 12 },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 16,
+                            centeredSlides: false,
+                        },
+                        1024: { slidesPerView: 3, spaceBetween: 24 },
+                    }}
+                >
                     {projects
                         .slice()
                         .reverse()
@@ -61,7 +83,21 @@ export default function Projects() {
                             </SwiperSlide>
                         ))}
                 </Swiper>
-            </ul>
+
+                {/* Custom Navigation Buttons */}
+                <button
+                    className="custom-prev hidden md:flex absolute top-1/2 -left-10 transform -translate-y-1/2 bg-burgundy text-cream p-2 rounded-full shadow-lg hover:bg-burgundy-dark transition"
+                    aria-label="Previous slide"
+                >
+                    ‹
+                </button>
+                <button
+                    className="custom-next hidden md:flex absolute top-1/2 -right-10 transform -translate-y-1/2 bg-burgundy text-cream p-2 rounded-full shadow-lg hover:bg-burgundy-dark transition"
+                    aria-label="Next slide"
+                >
+                    ›
+                </button>
+            </div>
 
             <p className="text-burgundy text-center pb-2">
                 For more see my{" "}
