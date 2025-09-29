@@ -1,9 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
 import SmartLink from "../customexports/SmartLink";
-import Modal from "../customexports/Modal";
+import Modal from "./Modal";
+import { projectSwiperConfig } from "./SwiperConfig";
+import ProjectImage from "./ProjectImage";
 import "swiper/css";
 import "swiper/css/pagination";
 import "../styles/customswiper.css";
@@ -13,7 +14,8 @@ export type Project = {
     title: string;
     description: string;
     tech: string[];
-    image: string;
+    thumbnail: string;
+    images?: string[];
     live?: string;
     demo?: string;
     code?: string;
@@ -38,27 +40,9 @@ export default function Projects() {
             <h2 className="text-burgundy font-bold text-center">
                 Selected projects
             </h2>
+
             <ul className="lg:max-w-4xl md:max-w-2xl max-w-sm mx-auto my-4">
-                <Swiper
-                    modules={[Pagination]}
-                    loop={true}
-                    spaceBetween={16}
-                    centeredSlides={true}
-                    initialSlide={0}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    breakpoints={{
-                        0: { slidesPerView: 1, spaceBetween: 12 },
-                        640: { slidesPerView: 1, spaceBetween: 12 },
-                        768: {
-                            slidesPerView: 2,
-                            spaceBetween: 16,
-                            centeredSlides: false,
-                        },
-                        1024: { slidesPerView: 3, spaceBetween: 24 },
-                    }}
-                >
+                <Swiper {...projectSwiperConfig}>
                     {projects
                         .slice()
                         .reverse()
@@ -68,20 +52,17 @@ export default function Projects() {
                                     className="cursor-pointer"
                                     onClick={() => setSelectedProject(project)}
                                 >
-                                    <img
-                                        src={
-                                            project.image ||
-                                            "/projects/fallback-image.jpg"
-                                        }
+                                    <ProjectImage
+                                        src={project.thumbnail}
                                         alt={project.title}
-                                        className="w-full h-full object-cover object-top rounded-lg"
-                                        draggable={false}
+                                        className="h-full"
                                     />
                                 </li>
                             </SwiperSlide>
                         ))}
                 </Swiper>
             </ul>
+
             <p className="text-burgundy text-center pb-2">
                 For more see my{" "}
                 <SmartLink
