@@ -17,6 +17,7 @@ export type Project = {
     tech: string[];
     thumbnail: string;
     images?: string[];
+    videos?: string[];
     live?: string;
     demo?: string;
     code?: string;

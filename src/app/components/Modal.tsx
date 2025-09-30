@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { modalSwiperConfig } from "./SwiperConfig";
 import { Project } from "./Projects";
-import ProjectImage from "./ProjectImage";
 import ProjectLinks from "./ProjectLinks";
 import TechBadge from "./TechBadge";
 import "swiper/css";
@@ -22,7 +21,9 @@ export default function Modal({ isOpen, onClose, project }: ModalProps) {
 
     if (!isOpen || !project) return null;
 
-    const allImages = [project.thumbnail, ...(project.images || [])];
+    // Collect media (videos + images). Fallback to thumbnail if none exist.
+    const mediaItems = [...(project.videos || []), ...(project.images || [])];
+    const hasMedia = mediaItems.length > 0;
 
     return (
         <div
@@ -46,19 +47,46 @@ export default function Modal({ isOpen, onClose, project }: ModalProps) {
                     {project.title}
                 </h2>
 
-                {/* Image carousel */}
-                {allImages.length > 0 && (
+                {/* Media carousel */}
+                {hasMedia ? (
                     <Swiper {...modalSwiperConfig} className="mb-6">
-                        {allImages.map((img, idx) => (
-                            <SwiperSlide key={idx}>
-                                <ProjectImage
-                                    src={img}
-                                    alt={`${project.title} image ${idx + 1}`}
-                                    className="h-80 sm:h-96"
-                                />
+                        {project.images?.map((img, index) => (
+                            <SwiperSlide key={`image-${index}`}>
+                                <div className="flex items-center justify-center w-full h-80 sm:h-96 bg-cream rounded">
+                                    <img
+                                        src={img}
+                                        alt={`${project.title} image ${
+                                            index + 1
+                                        }`}
+                                        className="max-h-full max-w-full object-contain rounded"
+                                    />
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                        {project.videos?.map((video, index) => (
+                            <SwiperSlide key={`video-${index}`}>
+                                <div className="flex items-center justify-center w-full h-80 sm:h-96 bg-black rounded">
+                                    <video
+                                        controls
+                                        className="max-h-full max-w-full object-contain rounded"
+                                    >
+                                        <source src={video} type="video/mp4" />
+                                        Your browser does not support the video
+                                        tag.
+                                    </video>
+                                </div>
                             </SwiperSlide>
                         ))}
                     </Swiper>
+                ) : (
+                    // Fallback: show thumbnail if no other media exists
+                    <div className="flex items-center justify-center w-full h-80 sm:h-96 bg-cream mb-6 rounded">
+                        <img
+                            src={project.thumbnail}
+                            alt={`${project.title} thumbnail`}
+                            className="max-h-full max-w-full object-contain rounded"
+                        />
+                    </div>
                 )}
 
                 {/* Description */}

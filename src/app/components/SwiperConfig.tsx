@@ -18,4 +18,5 @@ export const modalSwiperConfig = {
     modules: [Pagination],
     pagination: { clickable: true },
     spaceBetween: 10,
+    loop: true,
 };

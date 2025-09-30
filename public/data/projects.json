@@ -5,6 +5,7 @@
     "description": "Project creating a Progressive Web App using wikipedia's API to show historical events which occured on the same date throughout history as when the app is accessed.",
     "tech": ["React", "PWA", "API"],
     "thumbnail": "/projects/today-in-history-thumbnail-2.png",
+    "images": ["/projects/today-in-history-mobile.png", "/projects/today-in-history-births.png", "/projects/today-in-history-deaths.png"],
     "demo": "https://todayinhistory-sann.netlify.app/",
     "code": "https://github.com/SaraAlexie/pwa-opgave",
     "api": "https://byabbe.se/on-this-day/"
@@ -15,14 +16,16 @@
     "description": "Webpage for an electronics store, made with the basics HTML, CSS and JavaScript. Group project from february 2021",
     "tech": ["HTML", "CSS", "JavaScript", "JSON"],
     "thumbnail": "/projects/hifi-thumbnail.png",
+    "images": ["/projects/hifi-frontpage.png", "/projects/hifi-brands.png", "/projects/hifi-shop-frontpage.png"],
     "code": "https://github.com/SaraAlexie/hifi-corner"
   },
     {
     "id": 3,
     "title": "Newsbox",
-    "description": "Webapp for News using the , made with the basics HTML, CSS and JavaScript. Scool project from may 2021",
+    "description": "Webapp for News made with the basics HTML, CSS and JavaScript. Scool project from may 2021",
     "tech": ["HTML", "CSS", "JavaScript", "API", "XML", "JSON"],
     "thumbnail": "/projects/newsbox-thumbnail.png",
+    "images": ["/projects/newsbox-inbox.png", "/projects/newsbox-settings.png", "/projects/newsbox-archive.png"],
     "code": "https://github.com/SaraAlexie/newsbox"
   },
   {
@@ -31,6 +34,7 @@
     "description": "Final exam from March 2022. Website for a fictional nightclub.",
     "tech": ["React", "Motion (prev Framer Motion)", "API"],
     "thumbnail": "/projects/night-club-thumbnail.png",
+    "images": ["/projects/night-club-hero.png", "/projects/night-club.png", "/projects/night-club-blog.png"],
     "code": "https://github.com/SaraAlexie/night-club",
     "api": "https://github.com/rts-cmk/night-club-api"
   },
@@ -40,6 +44,8 @@
     "description": "IoT project using Philips Hue API to control a smart at home lighting setup. School project from February 2022",
     "tech": ["React", "IoT", "API"],
     "thumbnail": "/projects/smartlights-thumbnail.png",
+    "images": ["/projects/smart-lights.png", "/projects/smartlights-room.png"],
+    "videos": ["/projects/smartlights-video.mp4"],
     "code": "https://github.com/SaraAlexie/smartlights",
     "api": "https://www.postman.com/postman/program-smart-lights/documentation/it5d52v/api-for-philips-hue"
   },
@@ -48,6 +54,7 @@
     "title": "Danske Spil - Om os",
     "description": "'About Us' section on the Danske Spil website as part of the larger project 'Nyt Forsideunivers'",
     "tech": ["React", "Next.js", "API", "Sitecore", "Tailwind"],
+    "images": ["/projects/danske-spil-om-os.png", "/projects/danske-spil-sidebar.png", "/projects/danske-spil-om-os-mobile.png"],
     "thumbnail": "/projects/danske-spil-om-os-thumbnail.png",
     "live": "https://danskespil.dk/om"
   }
