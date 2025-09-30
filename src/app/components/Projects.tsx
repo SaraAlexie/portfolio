@@ -16,7 +16,7 @@ export type Project = {
     description: string;
     tech: string[];
     thumbnail: string;
-    images: string[];
+    images?: string[];
     live?: string;
     demo?: string;
     code?: string;
@@ -86,13 +86,13 @@ export default function Projects() {
 
                 {/* Custom Navigation Buttons */}
                 <button
-                    className="custom-prev hidden md:flex absolute top-1/2 -left-10 transform -translate-y-1/2 bg-burgundy text-cream p-2 rounded-full shadow-lg hover:bg-burgundy-dark transition"
+                    className="custom-prev hidden md:flex absolute -left-15 transform -translate-y-1/2 text-burgundy text-9xl"
                     aria-label="Previous slide"
                 >
                     ‹
                 </button>
                 <button
-                    className="custom-next hidden md:flex absolute top-1/2 -right-10 transform -translate-y-1/2 bg-burgundy text-cream p-2 rounded-full shadow-lg hover:bg-burgundy-dark transition"
+                    className="custom-next hidden md:flex absolute -right-15 transform -translate-y-1/2 text-burgundy text-9xl"
                     aria-label="Next slide"
                 >
                     ›
@@ -117,4 +117,22 @@ export default function Projects() {
             />
         </section>
     );
+}
+
+{
+    /* Custom Navigation Buttons */
+}
+{
+    /*                <button
+                    className="custom-prev hidden md:flex absolute top-1/2 -left-10 transform -translate-y-1/2 bg-burgundy text-cream p-2 rounded-full shadow-lg hover:bg-burgundy-dark transition"
+                    aria-label="Previous slide"
+                >
+                    ‹
+                </button>
+                <button
+                    className="custom-next hidden md:flex absolute top-1/2 -right-10 transform -translate-y-1/2 bg-burgundy text-cream p-2 rounded-full shadow-lg hover:bg-burgundy-dark transition"
+                    aria-label="Next slide"
+                >
+                    ›
+                </button>*/
 }

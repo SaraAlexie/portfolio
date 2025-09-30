@@ -3,16 +3,32 @@
     --swiper-pagination-color: #6b2737;
 }
 
-.swiper-pagination-bullet-inactive-color {
-    color: #f4ede4;
-}
-
 .swiper-slide img {
     border-radius: 10px;
+}
+
+.swiper-pagination-bullet-inactive-color {
+    color: #f4ede4;
 }
 
 .swiper-pagination {
     position: relative;
     bottom: 0;
     margin-top: 1rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: none;
+
+    @media (min-width: 768px) {
+        display: flex;
+        /* position: absolute;*/
+        color: #6b2737;
+    }
+}
+
+.custom-next,
+.custom-prev {
+    top: 43%;
 }
