@@ -1,7 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
 import { projectSwiperConfig } from "./SwiperConfig";
 import SmartLink from "../customexports/SmartLink";
 import Modal from "./Modal";
@@ -31,6 +30,10 @@ export default function Projects() {
         null
     );
 
+    const prevRef = useRef<HTMLButtonElement | null>(null);
+    const nextRef = useRef<HTMLButtonElement | null>(null);
+    const paginationRef = useRef<HTMLDivElement | null>(null);
+
     useEffect(() => {
         fetch("/data/projects.json")
             .then((res) => res.json())
@@ -45,7 +48,23 @@ export default function Projects() {
             </h2>
 
             <div className="lg:max-w-4xl md:max-w-2xl max-w-sm mx-auto my-4 relative">
-                <Swiper {...projectSwiperConfig}>
+                <Swiper
+                    {...projectSwiperConfig}
+                    navigation={{
+                        prevEl: prevRef.current,
+                        nextEl: nextRef.current,
+                    }}
+                    pagination={{ el: paginationRef.current, clickable: true }}
+                    onBeforeInit={(swiper) => {
+                        // Bind navigation and pagination before init
+                        // @ts-ignore
+                        swiper.params.navigation.prevEl = prevRef.current;
+                        // @ts-ignore
+                        swiper.params.navigation.nextEl = nextRef.current;
+                        // @ts-ignore
+                        swiper.params.pagination.el = paginationRef.current;
+                    }}
+                >
                     {projects
                         .slice()
                         .reverse()
@@ -65,16 +84,21 @@ export default function Projects() {
                         ))}
                 </Swiper>
 
+                {/* Pagination container */}
+                <div ref={paginationRef} className="swiper-pagination" />
+
                 {/* Custom Navigation Buttons */}
                 <button
                     className="custom-prev hidden md:flex absolute -left-15 transform -translate-y-1/2 text-burgundy text-9xl"
                     aria-label="Previous slide"
+                    ref={prevRef}
                 >
                     ‹
                 </button>
                 <button
                     className="custom-next hidden md:flex absolute -right-15 transform -translate-y-1/2 text-burgundy text-9xl"
                     aria-label="Next slide"
+                    ref={nextRef}
                 >
                     ›
                 </button>

@@ -53,7 +53,7 @@ export default function Modal({ isOpen, onClose, project }: ModalProps) {
                         <Swiper {...modalSwiperConfig} className="mb-6">
                             {project.images?.map((img, index) => (
                                 <SwiperSlide key={`image-${index}`}>
-                                    <div className="flex items-center justify-center w-full h-80 sm:h-96 bg-cream rounded">
+                                    <div className="flex items-center justify-center w-4/5 mx-auto h-80 sm:h-96 bg-cream rounded">
                                         <img
                                             src={img}
                                             alt={`${project.title} image ${
@@ -66,7 +66,7 @@ export default function Modal({ isOpen, onClose, project }: ModalProps) {
                             ))}
                             {project.videos?.map((video, index) => (
                                 <SwiperSlide key={`video-${index}`}>
-                                    <div className="flex items-center justify-center w-full h-80 sm:h-96 bg-black rounded">
+                                    <div className="flex items-center justify-center w-4/5 mx-auto h-80 sm:h-96 bg-black rounded">
                                         <video
                                             controls
                                             className="max-h-full max-w-full object-contain rounded"
@@ -82,10 +82,10 @@ export default function Modal({ isOpen, onClose, project }: ModalProps) {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-                        <button className="custom-prev hidden md:flex absolute -left-1 transform -translate-y-1/2 text-burgundy text-9xl">
+                        <button className="custom-prev hidden md:flex absolute right-11/12 transform -translate-y-1/2 text-burgundy text-9xl z-50">
                             ‹
                         </button>
-                        <button className="custom-next hidden md:flex absolute -right-1 transform -translate-y-1/2 text-burgundy text-9xl">
+                        <button className="custom-next hidden md:flex absolute left-11/12 transform -translate-y-1/2 text-burgundy text-9xl z-50">
                             ›
                         </button>
                     </>

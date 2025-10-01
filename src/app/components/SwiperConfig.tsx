@@ -7,10 +7,6 @@ export const projectSwiperConfig = {
     pagination: { clickable: true },
     centeredSlides: true,
     initialSlide: 0,
-    navigation: {
-        nextEl: ".custom-next",
-        prevEl: ".custom-prev",
-    },
     breakpoints: {
         0: { slidesPerView: 1, spaceBetween: 12 },
         640: { slidesPerView: 1, spaceBetween: 12 },
