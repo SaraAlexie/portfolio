@@ -1,11 +1,16 @@
-import { Pagination } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 
 export const projectSwiperConfig = {
-    modules: [Pagination],
+    modules: [Pagination, Navigation],
     loop: true,
+    spaceBetween: 16,
     pagination: { clickable: true },
     centeredSlides: true,
     initialSlide: 0,
+    navigation: {
+        nextEl: ".custom-next",
+        prevEl: ".custom-prev",
+    },
     breakpoints: {
         0: { slidesPerView: 1, spaceBetween: 12 },
         640: { slidesPerView: 1, spaceBetween: 12 },
@@ -15,8 +20,12 @@ export const projectSwiperConfig = {
 };
 
 export const modalSwiperConfig = {
-    modules: [Pagination],
+    modules: [Pagination, Navigation],
     pagination: { clickable: true },
-    spaceBetween: 10,
+    navigation: {
+        nextEl: ".custom-next",
+        prevEl: ".custom-prev",
+    },
     loop: true,
+    spaceBetween: 16,
 };

@@ -5,10 +5,11 @@ export default function Hero() {
     return (
         <section className="max-w-5xl mx-auto md:flex justify-between items-center p-4">
             <img
-                src="/sun_cartoonyfied.png"
-                alt="headshot placeholder"
-                className="rounded-full"
+                src="/framed-profile.png"
+                alt="headshot"
+                className="rounded-full object-cover w-sm h-sm lg:w-96 lg:h-96 mx-auto md:mx-0"
             />
+
             <div className="text-left p-4">
                 <p className="text-lg">Software Developer</p>
                 <h1 className="text-burgundy-dark">Sara A. N. Nederskov</h1>

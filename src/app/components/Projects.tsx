@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
+import { projectSwiperConfig } from "./SwiperConfig";
 import SmartLink from "../customexports/SmartLink";
 import Modal from "./Modal";
 import ProjectImage from "./ProjectImage";
@@ -44,28 +45,7 @@ export default function Projects() {
             </h2>
 
             <div className="lg:max-w-4xl md:max-w-2xl max-w-sm mx-auto my-4 relative">
-                <Swiper
-                    modules={[Pagination, Navigation]}
-                    loop={true}
-                    spaceBetween={16}
-                    centeredSlides={true}
-                    initialSlide={0}
-                    pagination={{ clickable: true }}
-                    navigation={{
-                        nextEl: ".custom-next",
-                        prevEl: ".custom-prev",
-                    }}
-                    breakpoints={{
-                        0: { slidesPerView: 1, spaceBetween: 12 },
-                        640: { slidesPerView: 1, spaceBetween: 12 },
-                        768: {
-                            slidesPerView: 2,
-                            spaceBetween: 16,
-                            centeredSlides: false,
-                        },
-                        1024: { slidesPerView: 3, spaceBetween: 24 },
-                    }}
-                >
+                <Swiper {...projectSwiperConfig}>
                     {projects
                         .slice()
                         .reverse()
@@ -118,22 +98,4 @@ export default function Projects() {
             />
         </section>
     );
-}
-
-{
-    /* Custom Navigation Buttons */
-}
-{
-    /*                <button
-                    className="custom-prev hidden md:flex absolute top-1/2 -left-10 transform -translate-y-1/2 bg-burgundy text-cream p-2 rounded-full shadow-lg hover:bg-burgundy-dark transition"
-                    aria-label="Previous slide"
-                >
-                    ‹
-                </button>
-                <button
-                    className="custom-next hidden md:flex absolute top-1/2 -right-10 transform -translate-y-1/2 bg-burgundy text-cream p-2 rounded-full shadow-lg hover:bg-burgundy-dark transition"
-                    aria-label="Next slide"
-                >
-                    ›
-                </button>*/
 }

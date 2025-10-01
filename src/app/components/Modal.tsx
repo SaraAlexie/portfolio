@@ -49,35 +49,46 @@ export default function Modal({ isOpen, onClose, project }: ModalProps) {
 
                 {/* Media carousel */}
                 {hasMedia ? (
-                    <Swiper {...modalSwiperConfig} className="mb-6">
-                        {project.images?.map((img, index) => (
-                            <SwiperSlide key={`image-${index}`}>
-                                <div className="flex items-center justify-center w-full h-80 sm:h-96 bg-cream rounded">
-                                    <img
-                                        src={img}
-                                        alt={`${project.title} image ${
-                                            index + 1
-                                        }`}
-                                        className="max-h-full max-w-full object-contain rounded"
-                                    />
-                                </div>
-                            </SwiperSlide>
-                        ))}
-                        {project.videos?.map((video, index) => (
-                            <SwiperSlide key={`video-${index}`}>
-                                <div className="flex items-center justify-center w-full h-80 sm:h-96 bg-black rounded">
-                                    <video
-                                        controls
-                                        className="max-h-full max-w-full object-contain rounded"
-                                    >
-                                        <source src={video} type="video/mp4" />
-                                        Your browser does not support the video
-                                        tag.
-                                    </video>
-                                </div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
+                    <>
+                        <Swiper {...modalSwiperConfig} className="mb-6">
+                            {project.images?.map((img, index) => (
+                                <SwiperSlide key={`image-${index}`}>
+                                    <div className="flex items-center justify-center w-full h-80 sm:h-96 bg-cream rounded">
+                                        <img
+                                            src={img}
+                                            alt={`${project.title} image ${
+                                                index + 1
+                                            }`}
+                                            className="max-h-full max-w-full object-contain rounded"
+                                        />
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                            {project.videos?.map((video, index) => (
+                                <SwiperSlide key={`video-${index}`}>
+                                    <div className="flex items-center justify-center w-full h-80 sm:h-96 bg-black rounded">
+                                        <video
+                                            controls
+                                            className="max-h-full max-w-full object-contain rounded"
+                                        >
+                                            <source
+                                                src={video}
+                                                type="video/mp4"
+                                            />
+                                            Your browser does not support the
+                                            video tag.
+                                        </video>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                        <button className="custom-prev hidden md:flex absolute -left-1 transform -translate-y-1/2 text-burgundy text-9xl">
+                            ‹
+                        </button>
+                        <button className="custom-next hidden md:flex absolute -right-1 transform -translate-y-1/2 text-burgundy text-9xl">
+                            ›
+                        </button>
+                    </>
                 ) : (
                     // Fallback: show thumbnail if no other media exists
                     <div className="flex items-center justify-center w-full h-80 sm:h-96 bg-cream mb-6 rounded">
