@@ -2,8 +2,8 @@
     {
     "id": 1,
     "title": "Today in History",
-    "description": "Project creating a Progressive Web App using wikipedia's API to show historical events which occured on the same date throughout history as when the app is accessed.",
-    "tech": ["React", "PWA", "API"],
+    "description": "A Progressive Web App using wikipedia's API to show historical events, births and deaths which occured on the same date throughout history as when the app is accessed",
+    "tech": ["React", "Emotion/Styled components", "PWA", "API"],
     "thumbnail": "/projects/today-in-history-thumbnail-2.png",
     "images": ["/projects/today-in-history-mobile.png", "/projects/today-in-history-births.png", "/projects/today-in-history-deaths.png"],
     "demo": "https://todayinhistory-sann.netlify.app/",
@@ -22,7 +22,7 @@
     {
     "id": 3,
     "title": "Newsbox",
-    "description": "Webapp for News made with the basics HTML, CSS and JavaScript. Scool project from may 2021",
+    "description": "Webapp for News made with the basics HTML, CSS and JavaScript.",
     "tech": ["HTML", "CSS", "JavaScript", "API", "XML", "JSON"],
     "thumbnail": "/projects/newsbox-thumbnail.png",
     "images": ["/projects/newsbox-inbox.png", "/projects/newsbox-settings.png", "/projects/newsbox-archive.png"],
@@ -31,8 +31,8 @@
   {
     "id": 4,
     "title": "Night Club",
-    "description": "Final exam from March 2022. Website for a fictional nightclub.",
-    "tech": ["React", "Motion (prev Framer Motion)", "API"],
+    "description": "Website for a fictional Nightclub with a focus on animations and fetching and showing data.",
+    "tech": ["React", "Emotion/Styled components", "Motion (prev Framer Motion)", "API"],
     "thumbnail": "/projects/night-club-thumbnail.png",
     "images": ["/projects/night-club-hero.png", "/projects/night-club.png", "/projects/night-club-blog.png"],
     "code": "https://github.com/SaraAlexie/night-club",
@@ -41,8 +41,8 @@
     {
     "id": 5,
     "title": "Smart Lights",
-    "description": "IoT project using Philips Hue API to control a smart at home lighting setup. School project from February 2022",
-    "tech": ["React", "IoT", "API"],
+    "description": "IoT project using Philips Hue API to control a smart at home lighting setup.",
+    "tech": ["React", "IoT", "API", "Emotion/Styled components"],
     "thumbnail": "/projects/smartlights-thumbnail.png",
     "images": ["/projects/smart-lights.png", "/projects/smartlights-room.png"],
     "videos": ["/projects/smartlights-video.mp4"],
