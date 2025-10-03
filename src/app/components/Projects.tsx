@@ -57,11 +57,11 @@ export default function Projects() {
                     pagination={{ el: paginationRef.current, clickable: true }}
                     onBeforeInit={(swiper) => {
                         // Bind navigation and pagination before init
-                        // @ts-ignore
+                        // @ts-expect-error
                         swiper.params.navigation.prevEl = prevRef.current;
-                        // @ts-ignore
+                        // @ts-expect-error
                         swiper.params.navigation.nextEl = nextRef.current;
-                        // @ts-ignore
+                        // @ts-expect-error
                         swiper.params.pagination.el = paginationRef.current;
                     }}
                 >

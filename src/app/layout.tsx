@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
     title: "Sara Nederskov - Software Developer",
     description: `Did you say creative, diligent and awesome programmer? No?
-                    Well, good thing I did because that's what I am. I love
+                    Well, good thing I did because that&apos;s what I am. I love
                     making beautiful and functional websites your customers are
                     going to enjoy using. Take a look around my portfolio and if
                     you are interested in connecting, don't stay a stranger and
