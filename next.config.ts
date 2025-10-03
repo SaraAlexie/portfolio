@@ -5,7 +5,8 @@ const nextConfig: NextConfig = {
   eslint: {
     // Ignore ESLint errors during builds
     ignoreDuringBuilds: true,
-  }
+  },
+  output: 'export', // Static export instead of next export
 }
 
 export default nextConfig
