@@ -21,7 +21,6 @@ export default function Modal({ isOpen, onClose, project }: ModalProps) {
 
     if (!isOpen || !project) return null;
 
-    // Collect media (videos + images). Fallback to thumbnail if none exist.
     const mediaItems = [...(project.videos || []), ...(project.images || [])];
     const hasMedia = mediaItems.length > 0;
 
@@ -59,6 +58,7 @@ export default function Modal({ isOpen, onClose, project }: ModalProps) {
                                             alt={`${project.title} image ${
                                                 index + 1
                                             }`}
+                                            loading="lazy"
                                             className="max-h-full max-w-full object-contain rounded"
                                         />
                                     </div>
