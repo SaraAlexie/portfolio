@@ -1,3 +1,4 @@
+"use client";
 import { Pagination, Navigation } from "swiper/modules";
 
 export const projectSwiperConfig = {

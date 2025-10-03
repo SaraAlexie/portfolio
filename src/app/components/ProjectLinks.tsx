@@ -1,3 +1,4 @@
+"use client";
 import SmartLink from "../customexports/SmartLink";
 import { Project } from "./Projects";
 

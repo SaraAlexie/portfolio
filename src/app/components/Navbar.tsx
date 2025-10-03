@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import SmartLink from "../customexports/SmartLink";
 import Logo from "../customexports/Logo";
 
 const navLinks = [
