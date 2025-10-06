@@ -21,7 +21,12 @@ export default function Navbar() {
                     <ul className="flex gap-x-14">
                         {navLinks.map(({ href, label }) => (
                             <li key={href}>
-                                <a href={href}>{label}</a>
+                                <a
+                                    href={href}
+                                    className="text-cream hover:text-gold transition-colors duration-200"
+                                >
+                                    {label}
+                                </a>
                             </li>
                         ))}
                     </ul>
@@ -29,33 +34,39 @@ export default function Navbar() {
 
                 {/* Mobile menu button */}
                 <button
-                    className="sm:hidden text-2xl"
+                    className={`sm:hidden text-2xl text-cream transition-transform duration-300 ${
+                        open ? "rotate-90 text-gold" : "rotate-0"
+                    }`}
                     onClick={() => setOpen((prev) => !prev)}
                     aria-label="Toggle menu"
                     aria-expanded={open}
                 >
                     ☰
                 </button>
-
-                {/* Mobile dropdown */}
-                {open && (
-                    <nav className="absolute top-full right-4 mt-2 bg-burgundy shadow-lg rounded-xl p-4 sm:hidden z-50">
-                        <ul className="flex flex-col gap-2">
-                            {navLinks.map(({ href, label }) => (
-                                <li key={href}>
-                                    <a
-                                        href={href}
-                                        onClick={() => setOpen(false)}
-                                        className="block cursor-pointer"
-                                    >
-                                        {label}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </nav>
-                )}
             </div>
+
+            {/* Mobile dropdown */}
+            <nav
+                className={`sm:hidden bg-burgundy/95 text-cream overflow-hidden transition-all duration-500 ease-in-out ${
+                    open
+                        ? "max-h-40 opacity-100 shadow-md"
+                        : "max-h-0 opacity-0"
+                }`}
+            >
+                <ul className="flex flex-col items-center gap-5 py-5">
+                    {navLinks.map(({ href, label }) => (
+                        <li key={href}>
+                            <a
+                                href={href}
+                                onClick={() => setOpen(false)}
+                                className="block text-cream hover:text-gold transition-colors duration-200"
+                            >
+                                {label}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
         </header>
     );
 }
