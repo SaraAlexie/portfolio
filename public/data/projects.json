@@ -35,6 +35,7 @@
     "tech": ["React", "Emotion/Styled components", "Motion (prev Framer Motion)", "API"],
     "thumbnail": "/projects/night-club-thumbnail.png",
     "images": ["/projects/night-club-hero.png", "/projects/night-club.png", "/projects/night-club-blog.png"],
+    "videos": ["/projects/night-club-video.mp4"],
     "code": "https://github.com/SaraAlexie/night-club",
     "api": "https://github.com/rts-cmk/night-club-api"
   },
