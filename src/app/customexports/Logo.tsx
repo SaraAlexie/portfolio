@@ -16,9 +16,9 @@ export default function Logo({
     ariaLabel = "Sara Alexie - Home",
 }: LogoProps) {
     // CSS variable fallbacks in case vars are not defined globally
-    const burgundy = "var(--color-burgundy, #6b2737)";
-    const gold = "var(--color-gold, #d4a373)";
-    const cream = "var(--color-cream, #f4ede4)";
+    const primary = "var(--color-primary, #6b2737)";
+    const secondary = "var(--color-secondary, #d4a373)";
+    const lightText = "var(--color-light-text, #f4ede4)";
 
     const iconStyle: React.CSSProperties = {
         width: size,
@@ -43,22 +43,22 @@ export default function Logo({
                 {/* background hexagon */}
                 <polygon
                     points="32,4 56,18 56,46 32,60 8,46 8,18"
-                    fill={gold}
-                    stroke={burgundy}
+                    fill={secondary}
+                    stroke={primary}
                     strokeWidth="1.5"
                 />
                 {/* inner hexagon outline for subtle depth */}
                 <polygon
                     points="32,10 50,20 50,44 32,54 14,44 14,20"
                     fill="none"
-                    stroke={cream}
+                    stroke={lightText}
                     strokeOpacity="0.06"
                     strokeWidth="1"
                 />
                 {/* left bracket */}
                 <path
                     d="M26 22 L20 32 L26 42"
-                    stroke={burgundy}
+                    stroke={primary}
                     strokeWidth="3"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -67,7 +67,7 @@ export default function Logo({
                 {/* right bracket */}
                 <path
                     d="M38 22 L44 32 L38 42"
-                    stroke={burgundy}
+                    stroke={primary}
                     strokeWidth="3"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -77,7 +77,7 @@ export default function Logo({
 
             {/* Wordmark */}
             <span className="leading-none">
-                <span className="font-semibold text-lg md:text-xl text-gold">
+                <span className="font-semibold text-lg md:text-xl text-secondary">
                     SaraAlexie
                 </span>
             </span>

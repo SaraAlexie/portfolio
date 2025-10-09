@@ -12,7 +12,7 @@ export default function Navbar() {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="sticky top-0 z-50 bg-burgundy h-16">
+        <header className="sticky top-0 z-50 bg-primary h-16">
             <div className="max-w-5xl mx-auto flex justify-between items-center px-4 h-full text-header font-bold">
                 <Logo size={44} className="ml-0" href="/" />
 
@@ -23,7 +23,7 @@ export default function Navbar() {
                             <li key={href}>
                                 <a
                                     href={href}
-                                    className="text-cream hover:text-gold transition-colors duration-200"
+                                    className="text-light-text hover:text-secondary transition-colors duration-200"
                                 >
                                     {label}
                                 </a>
@@ -34,8 +34,8 @@ export default function Navbar() {
 
                 {/* Mobile menu button */}
                 <button
-                    className={`sm:hidden text-2xl text-cream transition-transform duration-300 ${
-                        open ? "rotate-90 text-gold" : "rotate-0"
+                    className={`sm:hidden text-2xl text-light-text transition-transform duration-300 ${
+                        open ? "rotate-90 text-secondary" : "rotate-0"
                     }`}
                     onClick={() => setOpen((prev) => !prev)}
                     aria-label="Toggle menu"
@@ -47,7 +47,7 @@ export default function Navbar() {
 
             {/* Mobile dropdown */}
             <nav
-                className={`sm:hidden bg-burgundy/95 text-cream overflow-hidden transition-all duration-500 ease-in-out ${
+                className={`sm:hidden bg-primary/95 text-light-text overflow-hidden transition-all duration-500 ease-in-out ${
                     open
                         ? "max-h-40 opacity-100 shadow-md"
                         : "max-h-0 opacity-0"
@@ -59,7 +59,7 @@ export default function Navbar() {
                             <a
                                 href={href}
                                 onClick={() => setOpen(false)}
-                                className="block text-cream hover:text-gold transition-colors duration-200"
+                                className="block text-light-text hover:text-secondary transition-colors duration-200"
                             >
                                 {label}
                             </a>

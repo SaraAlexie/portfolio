@@ -39,19 +39,22 @@ export default function Skills() {
     ];
 
     return (
-        <section id="skills" className="max-w-5xl mx-auto px-4 py-8 bg-cream">
-            <h2 className="text-2xl font-bold mb-6 text-center text-burgundy">
+        <section
+            id="skills"
+            className="max-w-5xl mx-auto px-4 py-8 bg-light-text"
+        >
+            <h2 className="text-2xl font-bold mb-6 text-center text-primary">
                 Skills
             </h2>
 
-            <div className="flex flex-wrap justify-center gap-6 text-burgundy">
+            <div className="flex flex-wrap justify-center gap-6 text-primary">
                 {skills.map((skill, index) => (
                     <div
                         key={index}
                         className="flex flex-col items-center gap-2 w-24"
                     >
                         <div className="text-5xl">{skill.icon}</div>
-                        <p className="text-sm font-medium text-center text-written">
+                        <p className="text-sm font-medium text-center text-dark-text">
                             {skill.title}
                         </p>
                     </div>

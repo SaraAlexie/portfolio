@@ -3,10 +3,10 @@ import SmartLink from "../customexports/SmartLink";
 import { Project } from "./Projects";
 
 const linkStyles: Record<string, string> = {
-    live: "bg-gold text-written hover:bg-gold-light",
-    demo: "bg-burgundy text-cream hover:bg-burgundy-dark",
-    code: "bg-taupe text-written hover:bg-gold-light",
-    api: "bg-burgundy-dark text-cream hover:bg-burgundy",
+    live: "bg-secondary text-dark-text hover:bg-btn-bg-secondary",
+    demo: "bg-primary text-light-text hover:bg-primary-dark",
+    code: "bg-btn-bg-primary text-dark-text hover:bg-btn-bg-secondary",
+    api: "bg-primary-dark text-light-text hover:bg-primary",
 };
 
 export default function ProjectLinks({ project }: { project: Project }) {

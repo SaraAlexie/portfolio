@@ -6,8 +6,8 @@ import SmartLink from "../customexports/SmartLink";
 
 export default function Footer() {
     return (
-        <footer className="bg-gradient-to-r from-gold-light to-gold py-6">
-            <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 text-burgundy text-sm sm:text-base">
+        <footer className="bg-gradient-to-r from-btn-bg-secondary to-secondary py-6">
+            <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 text-primary text-sm sm:text-base">
                 <span className="flex items-center gap-2">
                     Made with{" "}
                     <FaReact className="text-2xl inline transition-transform duration-200 hover:scale-110" />
@@ -17,7 +17,7 @@ export default function Footer() {
                 </span>
                 <SmartLink
                     href="/"
-                    className="font-semibold underline hover:text-burgundy-dark transition"
+                    className="font-semibold underline hover:text-primary-dark transition"
                 >
                     by SaraAlexie
                 </SmartLink>

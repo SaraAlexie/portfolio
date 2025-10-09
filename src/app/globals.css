@@ -4,18 +4,18 @@
 }
 
 @theme {
-    --color-burgundy: #6b2737;
-    --color-burgundy-dark: #4a1c2a;
+    /* Main colors */
+    --color-primary: #6b2737;
+    --color-primary-dark: #4a1c2a;
+    --color-secondary: #d4a373;
 
     /* Supporting colors */
-    --color-taupe: #b8a089;
-    --color-gold: #d4a373;
-    --color-gold-light: #ffd9a0;
-    --color-cream: #f4ede4;
+    --color-btn-bg-primary: #b8a089;
+    --color-btn-bg-secondary: #ffd9a0;
 
     /* Text */
-    --color-header: var(--color-cream);
-    --color-written: #1c1c1c;
+    --color-light-text: #f4ede4;
+    --color-dark-text: #1c1c1c;
 }
 
 @layer components {
@@ -46,5 +46,5 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--color-cream);
+    background-color: var(--color-light-text);
 }

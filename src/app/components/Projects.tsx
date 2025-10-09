@@ -42,8 +42,8 @@ export default function Projects() {
     }, []);
 
     return (
-        <section id="projects" className="pt-5 bg-gold relative">
-            <h2 className="text-burgundy font-bold text-center">
+        <section id="projects" className="pt-5 bg-secondary relative">
+            <h2 className="text-primary font-bold text-center">
                 Selected projects
             </h2>
 
@@ -89,14 +89,14 @@ export default function Projects() {
 
                 {/* Custom Navigation Buttons */}
                 <button
-                    className="custom-prev hidden md:flex absolute -left-15 transform -translate-y-1/2 text-burgundy text-9xl"
+                    className="custom-prev hidden md:flex absolute -left-15 transform -translate-y-1/2 text-primary text-9xl"
                     aria-label="Previous slide"
                     ref={prevRef}
                 >
                     ‹
                 </button>
                 <button
-                    className="custom-next hidden md:flex absolute -right-15 transform -translate-y-1/2 text-burgundy text-9xl"
+                    className="custom-next hidden md:flex absolute -right-15 transform -translate-y-1/2 text-primary text-9xl"
                     aria-label="Next slide"
                     ref={nextRef}
                 >
@@ -104,7 +104,7 @@ export default function Projects() {
                 </button>
             </div>
 
-            <p className="text-burgundy text-center pb-2">
+            <p className="text-primary text-center pb-2">
                 For more see my{" "}
                 <SmartLink
                     href="https://github.com/SaraAlexie"

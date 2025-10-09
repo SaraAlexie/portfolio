@@ -30,19 +30,19 @@ export default function Modal({ isOpen, onClose, project }: ModalProps) {
             onClick={onClose}
         >
             <div
-                className="relative bg-cream rounded-lg w-full max-w-4xl max-h-[90vh] overflow-y-auto p-6 sm:p-8"
+                className="relative bg-light-text rounded-lg w-full max-w-4xl max-h-[90vh] overflow-y-auto p-6 sm:p-8"
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Close button */}
                 <button
                     onClick={onClose}
-                    className="absolute top-2 right-2 text-xl font-bold text-burgundy-dark cursor-pointer"
+                    className="absolute top-2 right-2 text-xl font-bold text-primary-dark cursor-pointer"
                 >
                     ✕
                 </button>
 
                 {/* Title */}
-                <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-burgundy">
+                <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-primary">
                     {project.title}
                 </h2>
 
@@ -52,7 +52,7 @@ export default function Modal({ isOpen, onClose, project }: ModalProps) {
                         <Swiper {...modalSwiperConfig} className="mb-6">
                             {project.images?.map((img, index) => (
                                 <SwiperSlide key={`image-${index}`}>
-                                    <div className="flex items-center justify-center w-4/5 mx-auto h-80 sm:h-96 bg-cream rounded">
+                                    <div className="flex items-center justify-center w-4/5 mx-auto h-80 sm:h-96 bg-light-text rounded">
                                         <img
                                             src={img}
                                             alt={`${project.title} image ${
@@ -82,16 +82,16 @@ export default function Modal({ isOpen, onClose, project }: ModalProps) {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-                        <button className="custom-prev hidden md:flex absolute right-11/12 transform -translate-y-1/2 text-burgundy text-9xl z-50">
+                        <button className="custom-prev hidden md:flex absolute right-11/12 transform -translate-y-1/2 text-primary text-9xl z-50">
                             ‹
                         </button>
-                        <button className="custom-next hidden md:flex absolute left-11/12 transform -translate-y-1/2 text-burgundy text-9xl z-50">
+                        <button className="custom-next hidden md:flex absolute left-11/12 transform -translate-y-1/2 text-primary text-9xl z-50">
                             ›
                         </button>
                     </>
                 ) : (
                     // Fallback: show thumbnail if no other media exists
-                    <div className="flex items-center justify-center w-full h-80 sm:h-96 bg-cream mb-6 rounded">
+                    <div className="flex items-center justify-center w-full h-80 sm:h-96 bg-light-text mb-6 rounded">
                         <img
                             src={project.thumbnail}
                             alt={`${project.title} thumbnail`}
@@ -101,7 +101,7 @@ export default function Modal({ isOpen, onClose, project }: ModalProps) {
                 )}
 
                 {/* Description */}
-                <p className="text-written text-base sm:text-lg mb-4">
+                <p className="text-dark-text text-base sm:text-lg mb-4">
                     {project.description}
                 </p>
 
