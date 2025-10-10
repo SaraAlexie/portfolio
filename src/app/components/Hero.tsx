@@ -1,12 +1,10 @@
 "use client";
 import Link from "next/link";
 import SmartLink from "../customexports/SmartLink";
-import ToggleTheme from "./ToggleTheme";
 
 export default function Hero() {
     return (
         <section className="max-w-5xl mx-auto md:flex justify-between items-center p-4">
-            <ToggleTheme />
             <img
                 src="/framed-profile.png"
                 alt="headshot"

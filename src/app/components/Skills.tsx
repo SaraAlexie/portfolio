@@ -35,7 +35,7 @@ export default function Skills() {
         { title: "NPM", icon: <DiNpm /> },
         { title: "Gulp", icon: <DiGulp /> },
         { title: "Sass", icon: <DiSass /> },
-        { title: "Visual Studio Code", icon: <BiLogoVisualStudio /> },
+        { title: "VS Code", icon: <BiLogoVisualStudio /> },
     ];
 
     return (
