@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
-:root {
-}
-
 @theme {
     /* Main colors */
     --color-primary: #6b2737;
@@ -14,8 +11,14 @@
     --color-btn-bg-secondary: #ffd9a0;
 
     /* Text */
-    --color-light-text: #f4ede4;
-    --color-dark-text: #1c1c1c;
+    --color-primary-text: #f4ede4;
+    --color-inverse-text: #1c1c1c;
+}
+
+/* ===== DARK THEME ===== */
+
+.dark {
+    --color-primary: #1c1c1c;
 }
 
 @layer components {
@@ -38,13 +41,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        /*FOR DARK THEME*/
-    }
-}
-
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--color-light-text);
+    background-color: var(--color-primary-text);
 }

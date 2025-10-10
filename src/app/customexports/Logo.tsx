@@ -18,7 +18,7 @@ export default function Logo({
     // CSS variable fallbacks in case vars are not defined globally
     const primary = "var(--color-primary, #6b2737)";
     const secondary = "var(--color-secondary, #d4a373)";
-    const lightText = "var(--color-light-text, #f4ede4)";
+    const lightText = "var(--color-primary-text, #f4ede4)";
 
     const iconStyle: React.CSSProperties = {
         width: size,

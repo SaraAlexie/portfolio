@@ -1,10 +1,12 @@
 "use client";
 import Link from "next/link";
 import SmartLink from "../customexports/SmartLink";
+import ToggleTheme from "./ToggleTheme";
 
 export default function Hero() {
     return (
         <section className="max-w-5xl mx-auto md:flex justify-between items-center p-4">
+            <ToggleTheme />
             <img
                 src="/framed-profile.png"
                 alt="headshot"
@@ -22,7 +24,7 @@ export default function Hero() {
                     and reach out.
                 </p>
                 <div className="flex mt-2">
-                    <button className="border-none py-3 px-6 rounded-lg text-base cursor-pointer mr-2 bg-primary text-light-text">
+                    <button className="border-none py-3 px-6 rounded-lg text-base cursor-pointer mr-2 bg-primary text-primary-text">
                         <Link
                             href="/resume-sara-nederskov-english.pdf"
                             target="_blank"

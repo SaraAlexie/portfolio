@@ -11,7 +11,7 @@ export default function Custom404() {
     }, []);
 
     return (
-        <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-primary to-primary-dark px-4 text-light-text">
+        <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-primary to-primary-dark px-4 text-primary-text">
             <h1
                 className={`text-9xl sm:text-[12rem] font-extrabold mb-4 transition-transform duration-500 ${
                     bounce ? "translate-y-[-10px]" : "translate-y-[10px]"
