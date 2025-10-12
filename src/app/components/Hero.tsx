@@ -6,7 +6,7 @@ export default function Hero() {
     return (
         <section className="max-w-5xl mx-auto md:flex justify-between items-center p-4">
             <img
-                src="/framed-profile.png"
+                src="/front-facing-pic.png"
                 alt="headshot"
                 className="rounded-full object-cover w-sm h-sm lg:w-96 lg:h-96 mx-auto md:mx-0"
             />
@@ -24,7 +24,7 @@ export default function Hero() {
                 <div className="flex mt-2">
                     <button className="border-none py-3 px-6 rounded-lg text-base cursor-pointer mr-2 bg-primary text-light-text">
                         <Link
-                            href="/resume-sara-nederskov-english.pdf"
+                            href="/sara-nederskov-resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
