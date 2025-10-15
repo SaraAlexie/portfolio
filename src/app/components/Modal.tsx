@@ -36,7 +36,7 @@ export default function Modal({ isOpen, onClose, project }: ModalProps) {
                 {/* Close button */}
                 <button
                     onClick={onClose}
-                    className="absolute top-2 right-2 text-xl font-bold text-primary-dark cursor-pointer"
+                    className="absolute top-2 right-2 text-xl font-bold text-secondary cursor-pointer"
                 >
                     ✕
                 </button>

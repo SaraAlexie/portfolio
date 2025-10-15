@@ -3,8 +3,8 @@
 @theme {
     /* Main colors */
     --color-primary: #6b2737;
-    --color-primary-dark: #4a1c2a;
-    --color-secondary: #d4a373;
+    --color-secondary: #4a1c2a;
+    --color-tertiary: #d4a373;
     --color-body-bg: #f4ede4;
 
     /* Supporting colors */
@@ -19,7 +19,13 @@
 /* ===== DARK THEME ===== */
 
 .dark {
-    --color-primary: #1c1c1c;
+    --color-primary: #6b2737;
+
+    --color-tertiary: #b68c57;
+
+    --color-body-bg: #1c1c1c;
+
+    --color-primary-text: #f4ede4;
 }
 
 @layer components {

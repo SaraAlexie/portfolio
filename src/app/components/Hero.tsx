@@ -11,9 +11,11 @@ export default function Hero() {
                 className="rounded-full object-cover w-sm h-sm lg:w-96 lg:h-96 mx-auto md:mx-0"
             />
             <div className="text-left p-4">
-                <p className="text-lg">Software Developer</p>
-                <h1 className="text-primary-dark">Sara A. N. Nederskov</h1>
-                <p>
+                <p className="text-lg text-primary-text">Software Developer</p>
+                <h1 className="text-secondary dark:text-primary">
+                    Sara A. N. Nederskov
+                </h1>
+                <p className="text-primary-text">
                     Did you say creative, diligent and awesome programmer? No?
                     Well, good thing I did because that&apos;s what I am. I love
                     making beautiful and functional websites your customers are
@@ -31,7 +33,7 @@ export default function Hero() {
                             Resume
                         </Link>
                     </button>
-                    <button className="border-none py-3 px-6 rounded-lg text-base cursor-pointer bg-secondary text-primary-dark">
+                    <button className="border-none py-3 px-6 rounded-lg text-base cursor-pointer bg-tertiary text-secondary">
                         <SmartLink href="https://github.com/SaraAlexie">
                             Github
                         </SmartLink>

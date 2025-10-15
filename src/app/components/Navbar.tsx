@@ -23,7 +23,7 @@ export default function Navbar() {
                             <li key={href}>
                                 <a
                                     href={href}
-                                    className="text-secondary-text hover:text-secondary transition-colors duration-200"
+                                    className="text-secondary-text hover:text-tertiary transition-colors duration-200"
                                 >
                                     {label}
                                 </a>
@@ -35,7 +35,7 @@ export default function Navbar() {
                 {/* Mobile menu button */}
                 <button
                     className={`sm:hidden text-2xl text-primary-text transition-transform duration-300 ${
-                        open ? "rotate-90 text-secondary" : "rotate-0"
+                        open ? "rotate-90 text-tertiary" : "rotate-0"
                     }`}
                     onClick={() => setOpen((prev) => !prev)}
                     aria-label="Toggle menu"
@@ -59,7 +59,7 @@ export default function Navbar() {
                             <a
                                 href={href}
                                 onClick={() => setOpen(false)}
-                                className="block text-primary-text hover:text-secondary transition-colors duration-200"
+                                className="block text-primary-text hover:text-tertiary transition-colors duration-200"
                             >
                                 {label}
                             </a>
