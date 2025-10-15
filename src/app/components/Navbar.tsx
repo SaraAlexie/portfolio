@@ -23,7 +23,7 @@ export default function Navbar() {
                             <li key={href}>
                                 <a
                                     href={href}
-                                    className="text-primary-text hover:text-secondary transition-colors duration-200"
+                                    className="text-secondary-text hover:text-secondary transition-colors duration-200"
                                 >
                                     {label}
                                 </a>

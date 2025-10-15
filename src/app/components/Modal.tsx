@@ -30,7 +30,7 @@ export default function Modal({ isOpen, onClose, project }: ModalProps) {
             onClick={onClose}
         >
             <div
-                className="relative bg-primary-text rounded-lg w-full max-w-4xl max-h-[90vh] overflow-y-auto p-6 sm:p-8"
+                className="relative bg-body-bg rounded-lg w-full max-w-4xl max-h-[90vh] overflow-y-auto p-6 sm:p-8"
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Close button */}
@@ -52,7 +52,7 @@ export default function Modal({ isOpen, onClose, project }: ModalProps) {
                         <Swiper {...modalSwiperConfig} className="mb-6">
                             {project.images?.map((img, index) => (
                                 <SwiperSlide key={`image-${index}`}>
-                                    <div className="flex items-center justify-center w-4/5 mx-auto h-80 sm:h-96 bg-primary-text rounded">
+                                    <div className="flex items-center justify-center w-4/5 mx-auto h-80 sm:h-96 bg-body-bg rounded">
                                         <img
                                             src={img}
                                             alt={`${project.title} image ${
@@ -91,7 +91,7 @@ export default function Modal({ isOpen, onClose, project }: ModalProps) {
                     </>
                 ) : (
                     // Fallback: show thumbnail if no other media exists
-                    <div className="flex items-center justify-center w-full h-80 sm:h-96 bg-primary-text mb-6 rounded">
+                    <div className="flex items-center justify-center w-full h-80 sm:h-96 bg-body-bg mb-6 rounded">
                         <img
                             src={project.thumbnail}
                             alt={`${project.title} thumbnail`}
@@ -101,7 +101,7 @@ export default function Modal({ isOpen, onClose, project }: ModalProps) {
                 )}
 
                 {/* Description */}
-                <p className="text-inverse-text text-base sm:text-lg mb-4">
+                <p className="text-primary-text text-base sm:text-lg mb-4">
                     {project.description}
                 </p>
 

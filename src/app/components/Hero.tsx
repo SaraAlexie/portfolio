@@ -22,7 +22,7 @@ export default function Hero() {
                     and reach out.
                 </p>
                 <div className="flex mt-2">
-                    <button className="border-none py-3 px-6 rounded-lg text-base cursor-pointer mr-2 bg-primary text-primary-text">
+                    <button className="border-none py-3 px-6 rounded-lg text-base cursor-pointer mr-2 bg-primary text-secondary-text">
                         <Link
                             href="/sara-nederskov-resume.pdf"
                             target="_blank"

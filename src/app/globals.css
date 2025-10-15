@@ -5,14 +5,15 @@
     --color-primary: #6b2737;
     --color-primary-dark: #4a1c2a;
     --color-secondary: #d4a373;
+    --color-body-bg: #f4ede4;
 
     /* Supporting colors */
     --color-btn-bg-primary: #b8a089;
     --color-btn-bg-secondary: #ffd9a0;
 
     /* Text */
-    --color-primary-text: #f4ede4;
-    --color-inverse-text: #1c1c1c;
+    --color-primary-text: #1c1c1c;
+    --color-secondary-text: var(--color-body-bg);
 }
 
 /* ===== DARK THEME ===== */
@@ -43,5 +44,5 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--color-primary-text);
+    background-color: var(--color-body-bg);
 }

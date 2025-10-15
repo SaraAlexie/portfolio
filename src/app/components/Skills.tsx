@@ -39,10 +39,7 @@ export default function Skills() {
     ];
 
     return (
-        <section
-            id="skills"
-            className="max-w-5xl mx-auto px-4 py-8 bg-primary-text"
-        >
+        <section id="skills" className="max-w-5xl mx-auto px-4 py-8 bg-body-bg">
             <h2 className="text-2xl font-bold mb-6 text-center text-primary">
                 Skills
             </h2>
@@ -54,7 +51,7 @@ export default function Skills() {
                         className="flex flex-col items-center gap-2 w-24"
                     >
                         <div className="text-5xl">{skill.icon}</div>
-                        <p className="text-sm font-medium text-center text-inverse-text">
+                        <p className="text-sm font-medium text-center text-primary-text">
                             {skill.title}
                         </p>
                     </div>
