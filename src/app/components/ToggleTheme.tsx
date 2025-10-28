@@ -25,7 +25,7 @@ export default function ToggleTheme() {
     return (
         <button
             onClick={toggleTheme}
-            className="w-14 h-7 flex items-center p-1 rounded-full bg-[--color-btn-bg-primary] relative transition-colors duration-300"
+            className="ml-4 w-14 h-7 flex items-center p-1 rounded-full bg-[--color-btn-bg-primary] relative transition-colors duration-300"
         >
             {/* Sliding circle container */}
             <span
@@ -35,7 +35,7 @@ export default function ToggleTheme() {
                 {/* Sun SVG */}
                 <svg
                     className={`w-5 h-5 text-yellow-400 transition-opacity duration-500 ${
-                        isDark ? "opacity-0" : "opacity-100"
+                        isDark ? "opacity-100" : "opacity-0"
                     }`}
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -57,7 +57,7 @@ export default function ToggleTheme() {
                 {/* Moon SVG */}
                 <svg
                     className={`w-5 h-5 text-gray-200 transition-opacity duration-500 absolute top-0 left-0
-            ${isDark ? "opacity-100" : "opacity-0"}`}
+            ${isDark ? "opacity-0" : "opacity-100"}`}
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
