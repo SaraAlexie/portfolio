@@ -12,11 +12,9 @@
     --color-hero-link-bg-two: #d4a373;
     --color-hero-link-text-one: #f4ede4;
     --color-hero-link-text-two: #4a1c2a;
-
     --color-nav-link-text: #f4ede4;
-
     --color-tech-bg: #b8a089;
-
+    --color-tech-text: #1c1c1c;
     --color-btn-bg-secondary: #ffd9a0;
 
     /* Text */
@@ -32,12 +30,6 @@
     --color-secondary: #4a1c2a;
     --color-tertiary: #b68c57;
     --color-body-bg: #1c1c1c;
-
-    /* For buttons and links */
-    --color-hero-link-bg-one: #6b2737;
-    --color-hero-link-bg-two: #d4a373;
-    --color-hero-link-text-one: #f4ede4;
-    --color-hero-link-text-two: #4a1c2a;
 
     /* Text */
     --color-primary-text: #f4ede4;
