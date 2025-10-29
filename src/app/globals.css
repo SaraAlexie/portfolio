@@ -1,21 +1,38 @@
 @import "tailwindcss";
 
-:root {
-}
-
 @theme {
     /* Main colors */
     --color-primary: #6b2737;
-    --color-primary-dark: #4a1c2a;
-    --color-secondary: #d4a373;
+    --color-secondary: #4a1c2a;
+    --color-tertiary: #d4a373;
+    --color-body-bg: #f4ede4;
 
-    /* Supporting colors */
-    --color-btn-bg-primary: #b8a089;
+    /* For buttons and links */
+    --color-hero-link-bg-one: #6b2737;
+    --color-hero-link-bg-two: #d4a373;
+    --color-hero-link-text-one: #f4ede4;
+    --color-hero-link-text-two: #4a1c2a;
+    --color-nav-link-text: #f4ede4;
+    --color-tech-bg: #b8a089;
+    --color-tech-text: #1c1c1c;
     --color-btn-bg-secondary: #ffd9a0;
 
     /* Text */
-    --color-light-text: #f4ede4;
-    --color-dark-text: #1c1c1c;
+    --color-primary-text: #1c1c1c;
+    --color-secondary-text: var(--color-body-bg);
+}
+
+/* ===== DARK THEME ===== */
+
+.dark {
+    /* Main colors */
+    --color-primary: #6b2737;
+    --color-secondary: #4a1c2a;
+    --color-tertiary: #b68c57;
+    --color-body-bg: #1c1c1c;
+
+    /* Text */
+    --color-primary-text: #f4ede4;
 }
 
 @layer components {
@@ -38,13 +55,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        /*FOR DARK THEME*/
-    }
-}
-
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--color-light-text);
+    background-color: var(--color-body-bg);
 }

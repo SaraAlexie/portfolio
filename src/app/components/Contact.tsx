@@ -9,13 +9,13 @@ export default function Contact() {
             className="bg-light-text text-primary text-center py-12"
         >
             <h3 className="text-2xl font-bold mb-4">Contact</h3>
-            <p className="mb-6">
+            <p className="mb-6 text-primary-text">
                 If you want to get in touch or learn more about my skillset,
                 please visit my LinkedIn page
             </p>
             <SmartLink
                 href="https://linkedin.com/in/saranederskov"
-                className="inline-flex items-center gap-2 bg-primary text-light-text font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-btn-bg-secondary transition"
+                className="inline-flex items-center gap-2 bg-primary text-nav-link-text font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-btn-bg-secondary transition"
             >
                 <FaLinkedin size={20} />
                 LinkedIn

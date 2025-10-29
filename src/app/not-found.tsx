@@ -11,7 +11,7 @@ export default function Custom404() {
     }, []);
 
     return (
-        <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-primary to-primary-dark px-4 text-light-text">
+        <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-primary to-secondary px-4 text-primary-text">
             <h1
                 className={`text-9xl sm:text-[12rem] font-extrabold mb-4 transition-transform duration-500 ${
                     bounce ? "translate-y-[-10px]" : "translate-y-[10px]"
@@ -20,7 +20,7 @@ export default function Custom404() {
                 404
             </h1>
 
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-secondary text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-primary-text text-center">
                 Page Not Found
             </h2>
 
@@ -31,7 +31,7 @@ export default function Custom404() {
 
             <SmartLink
                 href="/"
-                className="bg-secondary text-primary font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-btn-bg-secondary transition"
+                className="bg-secondary text-secondary-text font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-btn-bg-secondary hover:text-primary-text transition"
             >
                 Go Back Home
             </SmartLink>

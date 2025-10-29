@@ -42,7 +42,7 @@ export default function Projects() {
     }, []);
 
     return (
-        <section id="projects" className="pt-5 bg-secondary relative">
+        <section id="projects" className="pt-5 bg-tertiary relative">
             <h2 className="text-primary font-bold text-center">
                 Selected projects
             </h2>
