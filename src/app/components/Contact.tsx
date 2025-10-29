@@ -15,7 +15,7 @@ export default function Contact() {
             </p>
             <SmartLink
                 href="https://linkedin.com/in/saranederskov"
-                className="inline-flex items-center gap-2 bg-primary text-secondary-text dark:text-primary-text font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-btn-bg-secondary transition"
+                className="inline-flex items-center gap-2 bg-primary text-nav-link-text font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-btn-bg-secondary transition"
             >
                 <FaLinkedin size={20} />
                 LinkedIn
