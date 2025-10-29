@@ -7,7 +7,12 @@
     --color-tertiary: #d4a373;
     --color-body-bg: #f4ede4;
 
-    /* Supporting colors */
+    /* For buttons and links */
+    --color-hero-link-bg-one: #6b2737;
+    --color-hero-link-bg-two: #d4a373;
+    --color-hero-link-text-one: #f4ede4;
+    --color-hero-link-text-two: #4a1c2a;
+
     --color-btn-bg-primary: #b8a089;
     --color-btn-bg-secondary: #ffd9a0;
 
@@ -19,12 +24,19 @@
 /* ===== DARK THEME ===== */
 
 .dark {
+    /* Main colors */
     --color-primary: #6b2737;
-
+    --color-secondary: #4a1c2a;
     --color-tertiary: #b68c57;
-
     --color-body-bg: #1c1c1c;
 
+    /* For buttons and links */
+    --color-hero-link-bg-one: #6b2737;
+    --color-hero-link-bg-two: #d4a373;
+    --color-hero-link-text-one: #f4ede4;
+    --color-hero-link-text-two: #4a1c2a;
+
+    /* Text */
     --color-primary-text: #f4ede4;
 }
 

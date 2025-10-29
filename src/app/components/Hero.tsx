@@ -12,9 +12,7 @@ export default function Hero() {
             />
             <div className="text-left p-4">
                 <p className="text-lg text-primary-text">Software Developer</p>
-                <h1 className="text-secondary dark:text-primary">
-                    Sara A. N. Nederskov
-                </h1>
+                <h1 className="text-primary">Sara A. N. Nederskov</h1>
                 <p className="text-primary-text">
                     Did you say creative, diligent and awesome programmer? No?
                     Well, good thing I did because that&apos;s what I am. I love
@@ -24,7 +22,7 @@ export default function Hero() {
                     and reach out.
                 </p>
                 <div className="flex mt-2">
-                    <button className="border-none py-3 px-6 rounded-lg text-base cursor-pointer mr-2 bg-primary text-secondary-text">
+                    <button className="border-none py-3 px-6 rounded-lg text-base cursor-pointer mr-2 bg-hero-link-bg-one text-hero-link-text-one">
                         <Link
                             href="/sara-nederskov-resume.pdf"
                             target="_blank"
@@ -33,7 +31,7 @@ export default function Hero() {
                             Resume
                         </Link>
                     </button>
-                    <button className="border-none py-3 px-6 rounded-lg text-base cursor-pointer bg-tertiary text-secondary">
+                    <button className="border-none py-3 px-6 rounded-lg text-base cursor-pointer bg-hero-link-bg-two text-hero-link-text-two">
                         <SmartLink href="https://github.com/SaraAlexie">
                             Github
                         </SmartLink>

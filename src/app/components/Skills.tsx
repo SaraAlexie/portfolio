@@ -24,7 +24,7 @@ export default function Skills() {
         { title: "CSS", icon: <DiCss3 /> },
         { title: "JavaScript", icon: <DiJavascript /> },
         { title: "React", icon: <DiReact /> },
-        { title: "Node", icon: <DiNodejs /> },
+        { title: "Node.js", icon: <DiNodejs /> },
         { title: "Tailwind", icon: <RiTailwindCssFill /> },
         { title: "Typescript", icon: <SiTypescript /> },
         { title: "Git", icon: <DiGit /> },
@@ -35,7 +35,7 @@ export default function Skills() {
         { title: "NPM", icon: <DiNpm /> },
         { title: "Gulp", icon: <DiGulp /> },
         { title: "Sass", icon: <DiSass /> },
-        { title: "Visual Studio Code", icon: <BiLogoVisualStudio /> },
+        { title: "VS Code", icon: <BiLogoVisualStudio /> },
     ];
 
     return (
