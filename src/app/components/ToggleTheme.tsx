@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 export default function ToggleTheme() {
     const [isDark, setIsDark] = useState(false);
+    const [lastToggleTime, setLastToggleTime] = useState<number | null>(null);
 
     useEffect(() => {
         const savedTheme = localStorage.getItem("theme");
@@ -16,6 +17,17 @@ export default function ToggleTheme() {
     }, []);
 
     const toggleTheme = () => {
+        const now = Date.now();
+
+        if (lastToggleTime && now - lastToggleTime < 700) {
+            // Double toggle detected! ⛈️
+            const event = new CustomEvent("darkModeDoubleToggle");
+            window.dispatchEvent(event);
+            setLastToggleTime(null);
+        } else {
+            setLastToggleTime(now);
+        }
+
         const newIsDark = !isDark;
         setIsDark(newIsDark);
         document.documentElement.classList.toggle("dark", newIsDark);

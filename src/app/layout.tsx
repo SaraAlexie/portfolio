@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import CodeRain from "./components/CodeRain";
 
 export const metadata: Metadata = {
     title: "Sara Nederskov - Software Developer",
@@ -18,7 +19,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body>{children}</body>
+            <body>
+                {children}
+                <CodeRain />
+            </body>
         </html>
     );
 }
