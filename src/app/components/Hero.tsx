@@ -6,7 +6,7 @@ export default function Hero() {
     return (
         <section className="max-w-5xl mx-auto md:flex justify-between items-center p-4">
             <img
-                src="/front-facing-pic.png"
+                src="/front-facing-pic-tiny.png"
                 alt="headshot"
                 className="rounded-full object-cover w-sm h-sm lg:w-96 lg:h-96 mx-auto md:mx-0"
             />

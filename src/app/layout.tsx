@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import CodeRain from "./components/CodeRain";
+import ConsoleEasterEgg from "./components/ConsoleEasterEgg";
 
 export const metadata: Metadata = {
     title: "Sara Nederskov - Software Developer",
@@ -22,6 +23,7 @@ export default function RootLayout({
             <body>
                 {children}
                 <CodeRain />
+                <ConsoleEasterEgg />
             </body>
         </html>
     );
