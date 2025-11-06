@@ -7,13 +7,15 @@ export default function CodeRain() {
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        if (!ctx) return;
 
-        const ctx = canvas.getContext("2d")!;
-        let animationFrame: number;
-        const characters = "アイウエオカキクケコサシスセソ0123456789<>[]{}";
-        const fontSize = 16;
+        const characters = "</>{}()[]=+-;:/*%";
+        const fontSize = 18;
+
         let columns: number;
         let drops: number[];
+        let animationFrame: number;
 
         const resize = () => {
             canvas.width = window.innerWidth;
@@ -26,20 +28,28 @@ export default function CodeRain() {
         window.addEventListener("resize", resize);
 
         const draw = () => {
-            // Fade canvas slightly for trailing effect
-            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            // Transparent fade trails
+            ctx.fillStyle = "rgba(244,237,228,0.01)";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            ctx.fillStyle = "#0F0";
             ctx.font = `${fontSize}px monospace`;
 
             drops.forEach((y, i) => {
-                const text =
+                const xBase = i * fontSize;
+                const char =
                     characters[Math.floor(Math.random() * characters.length)];
-                const x = i * fontSize;
-                ctx.fillText(text, x, y * fontSize);
 
-                // reset drop randomly after screen ends
+                // Tiny horizontal drift
+                const x = xBase + Math.sin(Date.now() / 200 + i) * 2;
+
+                // Glow effect (stronger on special color)
+                const isSpecial = Math.random() > 0.88;
+                ctx.fillStyle = isSpecial ? "#6b2737" : "#d4a373";
+                ctx.shadowColor = ctx.fillStyle;
+                ctx.shadowBlur = isSpecial ? 10 : 6;
+
+                ctx.fillText(char, x, y * fontSize);
+
                 if (y * fontSize > canvas.height && Math.random() > 0.975) {
                     drops[i] = 0;
                 }
@@ -49,23 +59,23 @@ export default function CodeRain() {
             animationFrame = requestAnimationFrame(draw);
         };
 
-        const startRain = () => {
+        const start = () => {
             canvas.style.opacity = "1";
             draw();
-            setTimeout(stopRain, 3000);
+            setTimeout(stop, 3000);
         };
 
-        const stopRain = () => {
+        const stop = () => {
             canvas.style.opacity = "0";
             setTimeout(() => cancelAnimationFrame(animationFrame), 700);
         };
 
-        const handler = () => startRain();
-        window.addEventListener("darkModeDoubleToggle", handler);
+        const trigger = () => start();
+        window.addEventListener("darkModeDoubleToggle", trigger);
 
         return () => {
             window.removeEventListener("resize", resize);
-            window.removeEventListener("darkModeDoubleToggle", handler);
+            window.removeEventListener("darkModeDoubleToggle", trigger);
             cancelAnimationFrame(animationFrame);
         };
     }, []);
@@ -74,6 +84,7 @@ export default function CodeRain() {
         <canvas
             ref={canvasRef}
             className="fixed inset-0 pointer-events-none z-[9999] opacity-0 transition-opacity duration-700"
+            style={{ background: "transparent" }}
         />
     );
 }

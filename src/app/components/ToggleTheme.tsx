@@ -1,38 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useThemeToggle } from "../customexports/useThemeToggle";
 
 export default function ToggleTheme() {
-    const [isDark, setIsDark] = useState(false);
-    const [lastToggleTime, setLastToggleTime] = useState<number | null>(null);
-
-    useEffect(() => {
-        const savedTheme = localStorage.getItem("theme");
-        const prefersDark = window.matchMedia(
-            "(prefers-color-scheme: dark)"
-        ).matches;
-        const useDark = savedTheme === "dark" || (!savedTheme && prefersDark);
-
-        setIsDark(useDark);
-        document.documentElement.classList.toggle("dark", useDark);
-    }, []);
-
-    const toggleTheme = () => {
-        const now = Date.now();
-
-        if (lastToggleTime && now - lastToggleTime < 700) {
-            // Double toggle detected! ⛈️
-            const event = new CustomEvent("darkModeDoubleToggle");
-            window.dispatchEvent(event);
-            setLastToggleTime(null);
-        } else {
-            setLastToggleTime(now);
-        }
-
-        const newIsDark = !isDark;
-        setIsDark(newIsDark);
-        document.documentElement.classList.toggle("dark", newIsDark);
-        localStorage.setItem("theme", newIsDark ? "dark" : "light");
-    };
+    const { isDark, toggleTheme } = useThemeToggle();
 
     return (
         <button
