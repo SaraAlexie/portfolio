@@ -11,14 +11,14 @@ export default function ConsoleEasterEgg() {
             "👋 Hey fellow developer! You’ve unlocked a hidden console interface. Try: console.help()"
         );
 
-        const api = {
+        const api: Partial<Console> = {
             help: () => {
                 console.log(`
 Available commands:
 
 console.help()        → Show this menu
 console.about()       → Show tech stack and portfolio info
-console.joke()    → Random dev jokes
+console.joke()        → Random dev jokes
 console.rain()        → Manually activate code rain
                 `);
             },
