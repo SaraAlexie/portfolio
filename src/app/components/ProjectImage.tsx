@@ -1,4 +1,5 @@
 "use client";
+
 type ProjectImageProps = {
     src?: string;
     alt: string;

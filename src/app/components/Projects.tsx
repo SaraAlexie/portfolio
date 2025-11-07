@@ -5,6 +5,7 @@ import { projectSwiperConfig } from "./SwiperConfig";
 import SmartLink from "../customexports/SmartLink";
 import Modal from "./Modal";
 import ProjectImage from "./ProjectImage";
+import ProjectDescription from "./ProjectDescription";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -78,6 +79,10 @@ export default function Projects() {
                                         src={project.thumbnail}
                                         alt={project.title}
                                         className="h-full"
+                                    />
+                                    <ProjectDescription
+                                        title={project.title}
+                                        description={project.description}
                                     />
                                 </li>
                             </SwiperSlide>
