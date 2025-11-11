@@ -72,18 +72,40 @@ export default function Projects() {
                         .map((project) => (
                             <SwiperSlide key={project.id}>
                                 <li
-                                    className="cursor-pointer"
+                                    className="group cursor-pointer rounded-xl overflow-hidden bg-body-bg
+               transition-all duration-300 ease-out
+                hover:shadow-lg relative
+               w-72 h-96 mx-auto flex flex-col"
                                     onClick={() => setSelectedProject(project)}
                                 >
-                                    <ProjectImage
-                                        src={project.thumbnail}
-                                        alt={project.title}
-                                        className="h-full"
-                                    />
-                                    <ProjectDescription
-                                        title={project.title}
-                                        description={project.description}
-                                    />
+                                    {/* Image container - More space to image */}
+                                    <div className="w-full h-64 overflow-hidden rounded-xl">
+                                        <ProjectImage
+                                            src={project.thumbnail}
+                                            alt={project.title}
+                                            className="w-full h-full object-cover rounded-xl
++                      transition-transform duration-300 group-hover:scale-110 backface-hidden"
+                                        />
+                                    </div>
+
+                                    {/* Description always takes same leftover space */}
+                                    <div className="p-3 flex-1 flex flex-col">
+                                        <ProjectDescription
+                                            title={project.title}
+                                            description={project.description}
+                                        />
+                                    </div>
+
+                                    {/* Hover overlay CTA */}
+                                    <div
+                                        className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100
++                  transition-opacity duration-300 flex items-center justify-center
++                  rounded-xl overflow-hidden"
+                                    >
+                                        <span className="text-white font-semibold text-sm">
+                                            View Details
+                                        </span>
+                                    </div>
                                 </li>
                             </SwiperSlide>
                         ))}
