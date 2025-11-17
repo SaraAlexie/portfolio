@@ -12,7 +12,7 @@ export default function ProjectTagline({ title, tagline }: ProjectInfoProps) {
                 {title}
             </h3>
             <p className="text-primary-text text-xs line-clamp-2 flex-1">
-                {tagline ? tagline : "No tagline availiable"}
+                {tagline ? tagline : "Click for more details on this project"}
             </p>
         </>
     );
