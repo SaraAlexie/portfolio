@@ -41,6 +41,9 @@ Hint: try toggling dark mode a few times 😉
                     "There are 10 types of people: those who understand binary and those who don't.",
                     "A UDP joke? Might not get it…",
                     "Why do Java devs always wear glasses? Because they can't C#",
+                    "Why did the programmer go broke? Because he used up all his cashe",
+                    "Why was the computer cold? Bacause it left it's windows open",
+                    "Why do astronauts use Linux? Because they can't open windows in space",
                 ];
 
                 console.log(

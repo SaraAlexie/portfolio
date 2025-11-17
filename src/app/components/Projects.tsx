@@ -5,6 +5,7 @@ import { projectSwiperConfig } from "./SwiperConfig";
 import SmartLink from "../customexports/SmartLink";
 import Modal from "./Modal";
 import ProjectImage from "./ProjectImage";
+import ProjectTagline from "./ProjectTagline";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -13,6 +14,7 @@ import "../styles/customswiper.css";
 export type Project = {
     id: number;
     title: string;
+    tagline?: string;
     description: string;
     tech: string[];
     thumbnail: string;
@@ -71,14 +73,40 @@ export default function Projects() {
                         .map((project) => (
                             <SwiperSlide key={project.id}>
                                 <li
-                                    className="cursor-pointer"
+                                    className="group cursor-pointer rounded-xl overflow-hidden bg-body-bg
+                   transition-all duration-300 ease-out hover:shadow-lg relative
+                   w-72 mh-96 mx-auto flex flex-col"
                                     onClick={() => setSelectedProject(project)}
                                 >
-                                    <ProjectImage
-                                        src={project.thumbnail}
-                                        alt={project.title}
-                                        className="h-full"
-                                    />
+                                    {/* Image container with overlay */}
+                                    <div className="w-full h-64 overflow-hidden rounded-xl relative">
+                                        <ProjectImage
+                                            src={project.thumbnail}
+                                            alt={project.title}
+                                            className="w-full h-full object-cover rounded-xl
+                           transition-transform duration-300
+                           group-hover:scale-110 backface-hidden"
+                                        />
+
+                                        {/* Overlay appears only over the image */}
+                                        <div
+                                            className="absolute inset-0 bg-black/40 opacity-0
+                           group-hover:opacity-100 transition-opacity duration-300
+                           flex items-center justify-center rounded-xl"
+                                        >
+                                            <span className="text-white font-semibold text-sm">
+                                                View Details
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    {/* Description always takes same leftover space */}
+                                    <div className="p-3 flex-1 flex flex-col">
+                                        <ProjectTagline
+                                            title={project.title}
+                                            tagline={project.tagline}
+                                        />
+                                    </div>
                                 </li>
                             </SwiperSlide>
                         ))}

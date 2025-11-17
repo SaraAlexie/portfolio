@@ -2,6 +2,7 @@
     {
     "id": 1,
     "title": "Today in History",
+    "tagline": "A Progressive Web App using wikipedia's On This Day API to show historical events.",
     "description": "A Progressive Web App using wikipedia's API to show historical events, births and deaths which occured on the same date throughout history as when the app is accessed",
     "tech": ["React", "Emotion/Styled components", "PWA", "API"],
     "thumbnail": "/projects/today-in-history-thumbnail-2.png",
@@ -13,6 +14,7 @@
   {
     "id": 2,
     "title": "HiFI Corner",
+    "tagline": "Webpage for an electronics store, made with the basics HTML, CSS and JavaScript.",
     "description": "Webpage for an electronics store, made with the basics HTML, CSS and JavaScript. Group project from february 2021",
     "tech": ["HTML", "CSS", "JavaScript", "JSON"],
     "thumbnail": "/projects/hifi-thumbnail.png",
@@ -22,6 +24,7 @@
     {
     "id": 3,
     "title": "Newsbox",
+    "tagline": "Personal News webapp made using The New York Times' API",
     "description": "Webapp for News made with the basics HTML, CSS and JavaScript.",
     "tech": ["HTML", "CSS", "JavaScript", "API", "XML", "JSON"],
     "thumbnail": "/projects/newsbox-thumbnail.png",
@@ -31,6 +34,7 @@
   {
     "id": 4,
     "title": "Night Club",
+    "tagline": "Website for a fictional Nightclub made with local API and Motion animations",
     "description": "Website for a fictional Nightclub with a focus on animations and fetching and showing data.",
     "tech": ["React", "Emotion/Styled components", "Motion (prev Framer Motion)", "API"],
     "thumbnail": "/projects/night-club-thumbnail.png",
@@ -42,6 +46,7 @@
     {
     "id": 5,
     "title": "Smart Lights",
+    "tagline": "IoT webapp using Philips Hue API to control a smart at home lighting setup.",
     "description": "IoT project using Philips Hue API to control a smart at home lighting setup.",
     "tech": ["React", "IoT", "API", "Emotion/Styled components"],
     "thumbnail": "/projects/smartlights-thumbnail.png",
@@ -53,6 +58,7 @@
   {
     "id": 6,
     "title": "Danske Spil - Om os",
+    "tagline": "'About Us' section on the Danske Spil website as part of the larger project 'Nyt Forsideunivers'",
     "description": "'About Us' section on the Danske Spil website as part of the larger project 'Nyt Forsideunivers'",
     "tech": ["React", "Next.js", "API", "Sitecore", "Tailwind"],
     "images": ["/projects/danske-spil-om-os.png", "/projects/danske-spil-sidebar.png", "/projects/danske-spil-om-os-mobile.png"],

@@ -2,9 +2,9 @@
 declare global {
   interface Console {
     help: () => void;
+    about: () => void;
     joke: () => void;
     rain: () => void;
-    about: () => void;
   }
 }
 
