@@ -1,4 +1,6 @@
 "use client";
+
+import React from "react";
 import {
     DiReact,
     DiJavascript,
@@ -17,16 +19,17 @@ import {
 import { RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoVisualStudio } from "react-icons/bi";
 import { SiTypescript } from "react-icons/si";
+import { motion } from "framer-motion";
 
 export default function Skills() {
     const skills = [
-        { title: "Html", icon: <DiHtml5 /> },
+        { title: "HTML", icon: <DiHtml5 /> },
         { title: "CSS", icon: <DiCss3 /> },
         { title: "JavaScript", icon: <DiJavascript /> },
         { title: "React", icon: <DiReact /> },
         { title: "Node.js", icon: <DiNodejs /> },
         { title: "Tailwind", icon: <RiTailwindCssFill /> },
-        { title: "Typescript", icon: <SiTypescript /> },
+        { title: "TypeScript", icon: <SiTypescript /> },
         { title: "Git", icon: <DiGit /> },
         { title: "Java", icon: <DiJava /> },
         { title: "Docker", icon: <DiDocker /> },
@@ -38,25 +41,56 @@ export default function Skills() {
         { title: "VS Code", icon: <BiLogoVisualStudio /> },
     ];
 
+    // Framer Motion variants
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.06,
+            },
+        },
+    };
+
+    const item = {
+        hidden: { opacity: 0, y: 12 },
+        show: { opacity: 1, y: 0 },
+    };
+
     return (
-        <section id="skills" className="max-w-5xl mx-auto px-4 py-8 bg-body-bg">
-            <h2 className="text-2xl font-bold mb-6 text-center text-primary">
+        <section id="skills" className="max-w-5xl mx-auto px-4 py-16">
+            <h2 className="text-3xl font-bold mb-10 text-center text-primary tracking-tight">
                 Skills
             </h2>
 
-            <div className="flex flex-wrap justify-center gap-6 text-primary">
+            <motion.div
+                variants={container}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.2 }}
+                className="flex flex-wrap justify-center gap-8 text-primary"
+            >
                 {skills.map((skill, index) => (
-                    <div
+                    <motion.div
                         key={index}
-                        className="flex flex-col items-center gap-2 w-24"
+                        variants={item}
+                        whileHover={{ scale: 1.08 }}
+                        transition={{
+                            type: "spring",
+                            stiffness: 220,
+                            damping: 18,
+                        }}
+                        className="flex flex-col items-center gap-2 w-24 cursor-default select-none"
                     >
-                        <div className="text-5xl">{skill.icon}</div>
-                        <p className="text-sm font-medium text-center text-primary-text">
+                        <div className="text-5xl drop-shadow-sm">
+                            {skill.icon}
+                        </div>
+                        <p className="text-sm font-medium text-primary-text text-center">
                             {skill.title}
                         </p>
-                    </div>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </section>
     );
 }
