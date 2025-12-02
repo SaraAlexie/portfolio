@@ -60,9 +60,20 @@
     "title": "Danske Spil - Om os",
     "tagline": "'About Us' section on the Danske Spil website as part of the larger project 'Nyt Forsideunivers'",
     "description": "'About Us' section on the Danske Spil website as part of the larger project 'Nyt Forsideunivers'",
-    "tech": ["React", "Next.js", "API", "Sitecore", "Tailwind"],
+    "tech": ["React", "Next.js", "Typescript", "API", "Sitecore", "Tailwind"],
     "images": ["/projects/danske-spil-om-os.png", "/projects/danske-spil-sidebar.png", "/projects/danske-spil-om-os-mobile.png"],
     "thumbnail": "/projects/danske-spil-om-os-thumbnail.png",
     "live": "https://danskespil.dk/om"
+  },
+    {
+    "id": 7,
+    "title": "World Weather",
+    "tagline": "Webapp for weather information using OpenWeatherMap's API and React Leaflet for map integration.",
+    "description": "Weather webapp using OpenWeatherMap's API to show current weather for searched locations. React Leaflet is used for map integration to show the location visually.",
+    "tech": ["React","Next.js", "Typescript", "React Leaflet", "API", "Tailwind", "Tanstack Query"],
+    "thumbnail": "/projects/weather-thumbnail.png",
+    "images": ["/projects/weather-mobile-sunny.png", "/projects/weather-mobile-cloudy.png", "/projects/weather-desktop.png", "/projects/weather-desktop-search.png"],
+    "code": "https://github.com/SaraAlexie/world-weather-challange",
+    "api": "https://openweathermap.org/api"
   }
 ]
