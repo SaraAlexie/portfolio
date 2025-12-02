@@ -67,7 +67,7 @@
   },
     {
     "id": 7,
-    "title": "World Weather",
+    "title": "World Weather Map",
     "tagline": "Webapp for weather information using OpenWeatherMap's API and React Leaflet for map integration.",
     "description": "Weather webapp using OpenWeatherMap's API to show current weather for searched locations. React Leaflet is used for map integration to show the location visually.",
     "tech": ["React","Next.js", "Typescript", "React Leaflet", "API", "Tailwind", "Tanstack Query"],
