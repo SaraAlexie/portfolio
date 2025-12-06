@@ -28,7 +28,7 @@ console.rain()        → Manually activate code rain
 Stack & other fun facts:
 
 Made with Next.js, TypeScript and Tailwind
-Design: By yours truly
+Design by: Yours truly
 Easter eggs: you found this, how many more to go?
 
 Hint: try toggling dark mode a few times 😉
@@ -41,8 +41,8 @@ Hint: try toggling dark mode a few times 😉
                     "There are 10 types of people: those who understand binary and those who don't.",
                     "A UDP joke? Might not get it…",
                     "Why do Java devs always wear glasses? Because they can't C#",
-                    "Why did the programmer go broke? Because he used up all his cashe",
-                    "Why was the computer cold? Bacause it left it's windows open",
+                    "Why did the programmer go broke? Because he used up all his cache",
+                    "Why was the computer cold? Because it left it's windows open",
                     "Why do astronauts use Linux? Because they can't open windows in space",
                 ];
 

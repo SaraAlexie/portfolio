@@ -41,9 +41,13 @@ export default function Projects() {
           scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-gray-400
         "
             >
-                {projects.map((project) => (
-                    <motion.article
-                        className="
+                {projects
+                    .slice()
+                    .reverse()
+                    .map((project) => (
+                        <motion.article
+                            key={project.id}
+                            className="
     min-w-[260px] max-w-[260px]
     sm:min-w-[320px] sm:max-w-[320px]
     md:min-w-[380px] md:max-w-[380px]
@@ -57,25 +61,25 @@ export default function Projects() {
     snap-start md:snap-center
     flex-shrink-0 flex flex-col
   "
-                    >
-                        <div className="w-full aspect-[4/3] overflow-hidden rounded-t-2xl bg-muted">
-                            <img
-                                src={project.thumbnail}
-                                className="w-full h-full object-cover object-top"
-                            />
-                        </div>
+                        >
+                            <div className="w-full aspect-[4/3] overflow-hidden rounded-t-2xl bg-muted">
+                                <img
+                                    src={project.thumbnail}
+                                    className="w-full h-full object-cover object-top"
+                                />
+                            </div>
 
-                        <div className="p-4 sm:p-5 lg:p-6 flex flex-col gap-3 sm:gap-4 flex-grow">
-                            <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold">
-                                {project.title}
-                            </h3>
+                            <div className="p-4 sm:p-5 lg:p-6 flex flex-col gap-3 sm:gap-4 flex-grow">
+                                <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold">
+                                    {project.title}
+                                </h3>
 
-                            <p className="text-xs sm:text-sm opacity-80 line-clamp-2">
-                                {project.description}
-                            </p>
-                        </div>
-                    </motion.article>
-                ))}
+                                <p className="text-xs sm:text-sm opacity-80 line-clamp-2">
+                                    {project.description}
+                                </p>
+                            </div>
+                        </motion.article>
+                    ))}
             </div>
         </section>
     );
