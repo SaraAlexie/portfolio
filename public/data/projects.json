@@ -73,6 +73,7 @@
     "tech": ["React","Next.js", "Typescript", "React Leaflet", "API", "Tailwind", "Tanstack Query"],
     "thumbnail": "/projects/weather-thumbnail.png",
     "images": ["/projects/weather-mobile-sunny.png", "/projects/weather-mobile-cloudy.png", "/projects/weather-desktop.png", "/projects/weather-desktop-search.png"],
+    "demo": "https://worldweather-sann.vercel.app/",
     "code": "https://github.com/SaraAlexie/world-weather-challange",
     "api": "https://openweathermap.org/api"
   }
