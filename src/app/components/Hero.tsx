@@ -24,7 +24,7 @@ export default function Hero() {
                 <div className="flex mt-2">
                     <button className="border-none py-3 px-6 rounded-lg text-base cursor-pointer mr-2 bg-hero-link-bg-one text-hero-link-text-one">
                         <Link
-                            href="/sara-nederskov-resume.pdf"
+                            href="/sara_nederskov_resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
