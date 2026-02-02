@@ -8,7 +8,7 @@ export default function ConsoleEasterEgg() {
     `);
 
         console.log(
-            "👋 Hey fellow developer! You’ve unlocked a hidden console interface. Try: console.help()"
+            "👋 Hey fellow developer! You’ve unlocked a hidden console interface. Try: console.help()",
         );
 
         const api: Partial<Console> = {
@@ -41,13 +41,17 @@ Hint: try toggling dark mode a few times 😉
                     "There are 10 types of people: those who understand binary and those who don't.",
                     "A UDP joke? Might not get it…",
                     "Why do Java devs always wear glasses? Because they can't C#",
-                    "Why did the programmer go broke? Because he used up all his cashe",
+                    "Why did the programmer go broke? Because he used up all his cache",
                     "Why was the computer cold? Bacause it left it's windows open",
                     "Why do astronauts use Linux? Because they can't open windows in space",
+                    "How many programmers does it take to change a light bulb? None, that's a hardware problem.",
+                    "I like my coffee like I like my code: strong and without bugs.",
+                    "I like my coffee like I like my IDE: dark and free",
+                    "Why aren't frontend developers humble? They display: flex",
                 ];
 
                 console.log(
-                    "💬 " + jokes[Math.floor(Math.random() * jokes.length)]
+                    "💬 " + jokes[Math.floor(Math.random() * jokes.length)],
                 );
             },
 
