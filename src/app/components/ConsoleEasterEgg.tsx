@@ -42,7 +42,7 @@ Hint: try toggling dark mode a few times 😉
                     "A UDP joke? Might not get it…",
                     "Why do Java devs always wear glasses? Because they can't C#",
                     "Why did the programmer go broke? Because he used up all his cache",
-                    "Why was the computer cold? Bacause it left it's windows open",
+                    "Why was the computer cold? Because it left it's windows open",
                     "Why do astronauts use Linux? Because they can't open windows in space",
                     "How many programmers does it take to change a light bulb? None, that's a hardware problem.",
                     "I like my coffee like I like my code: strong and without bugs.",
