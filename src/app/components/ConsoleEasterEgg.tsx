@@ -28,7 +28,7 @@ console.rain()        → Manually activate code rain
 Stack & other fun facts:
 
 Made with Next.js, TypeScript and Tailwind
-Design: By yours truly
+Designed by: Yours truly
 Easter eggs: you found this, how many more to go?
 
 Hint: try toggling dark mode a few times 😉
@@ -39,7 +39,6 @@ Hint: try toggling dark mode a few times 😉
                 const jokes = [
                     "Why do programmers prefer dark mode? Because the light attracts bugs.",
                     "There are 10 types of people: those who understand binary and those who don't.",
-                    "A UDP joke? Might not get it…",
                     "Why do Java devs always wear glasses? Because they can't C#",
                     "Why did the programmer go broke? Because he used up all his cache",
                     "Why was the computer cold? Because it left it's windows open",

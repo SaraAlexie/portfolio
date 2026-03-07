@@ -16,7 +16,8 @@ import {
 } from "react-icons/di";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoVisualStudio } from "react-icons/bi";
-import { SiTypescript } from "react-icons/si";
+import { SiTypescript, SiNextdotjs } from "react-icons/si";
+import { FaVuejs } from "react-icons/fa";
 
 export default function Skills() {
     const skills = [
@@ -30,12 +31,14 @@ export default function Skills() {
         { title: "Git", icon: <DiGit /> },
         { title: "Java", icon: <DiJava /> },
         { title: "Docker", icon: <DiDocker /> },
+        { title: "Next.js", icon: <SiNextdotjs /> },
         { title: "Database", icon: <DiDatabase /> },
         { title: "IntelliJ", icon: <DiIntellij /> },
         { title: "NPM", icon: <DiNpm /> },
         { title: "Gulp", icon: <DiGulp /> },
         { title: "Sass", icon: <DiSass /> },
         { title: "VS Code", icon: <BiLogoVisualStudio /> },
+        { title: "Vue.js", icon: <FaVuejs /> },
     ];
 
     return (
